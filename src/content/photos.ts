@@ -115,6 +115,17 @@ export const photos: PhotoEntry[] = [
     type: 'video',
     note: 'Bab 03 - Vlog photobooth Jepara part 2.',
   },
+  {
+    id: 'video-jepara-pagi-bri',
+    src: '/photos/vlog-jepara-pagi-bri.mp4',
+    caption:
+      'Vlog pagi di Jepara Kota habis jemput cewek cantik, mampir ambil uang di BRI dulu.',
+    orientation: 'portrait',
+    ratio: '9 / 16',
+    position: 'center',
+    type: 'video',
+    note: 'Bab 03 - Vlog pagi di Jepara Kota & BRI.',
+  },
 
   /* ------------------------------------------------------------------------
      BAB 08 — Satu foto nonton film Sore di bioskop
@@ -164,6 +175,16 @@ export const photos: PhotoEntry[] = [
     position: 'center',
     type: 'video',
     note: 'Bab 12 - Vlog coffee shop Jepara part 2.',
+  },
+  {
+    id: 'video-momen-gemes',
+    src: '/photos/vlog-momen-gemes.mp4',
+    caption: 'Momen lucu banget waktu kamu lagi gemes-gemesnya.',
+    orientation: 'portrait',
+    ratio: '9 / 16',
+    position: 'center',
+    type: 'video',
+    note: 'Bab 12 - Video momen gemes.',
   },
 
   /* ------------------------------------------------------------------------
