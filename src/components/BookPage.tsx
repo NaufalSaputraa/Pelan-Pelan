@@ -155,6 +155,31 @@ const SCRAPBOOK_TILT = ['rotate-[0.8deg]', '-rotate-[1.1deg]']
  */
 const TEXT_STACK_TILT = ['-rotate-[0.7deg]', 'rotate-[0.6deg]']
 
+/**
+ * Render inline formatting sederhana: **tebal** jadi <strong> dan *miring* jadi <em>
+ * sehingga tanda bintang markdown tidak ikut muncul mentah di layar pembaca.
+ */
+function renderInlineFormatted(text: string) {
+  const parts = text.split(/(\*\*.*?\*\*|\*[^*\n]+?\*)/g)
+  return parts.map((part, index) => {
+    if (part.startsWith('**') && part.endsWith('**') && part.length > 4) {
+      return (
+        <strong key={index} className="font-semibold text-charcoal">
+          {part.slice(2, -2)}
+        </strong>
+      )
+    }
+    if (part.startsWith('*') && part.endsWith('*') && part.length > 2) {
+      return (
+        <em key={index} className="italic text-charcoal-soft">
+          {part.slice(1, -1)}
+        </em>
+      )
+    }
+    return part
+  })
+}
+
 export default function BookPage({
   chapter,
   index,
@@ -375,7 +400,7 @@ function TextPage({
       >
         {paragraphs.map((text, i) => (
           <p key={i} className="break-words">
-            {text}
+            {renderInlineFormatted(text)}
           </p>
         ))}
       </div>
@@ -417,7 +442,7 @@ function MinimalPage({
       >
         {paragraphs.map((text, i) => (
           <p key={i} className="break-words">
-            {text}
+            {renderInlineFormatted(text)}
           </p>
         ))}
       </div>
@@ -480,7 +505,7 @@ function QuotePage({
         >
           {paragraphs.slice(1).map((text, i) => (
             <p key={i} className="break-words">
-              {text}
+              {renderInlineFormatted(text)}
             </p>
           ))}
         </div>
@@ -512,7 +537,7 @@ function ScrapbookPage({
     >
       {paragraphs.map((text, i) => (
         <p key={i} className="break-words">
-          {text}
+          {renderInlineFormatted(text)}
         </p>
       ))}
     </div>

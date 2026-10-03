@@ -3,7 +3,7 @@
    --------------------------------------------------------------------------
    Digital Book:
    “Pelan-Pelan — Tentang kamu, tentang aku, dan tujuh tahun yang pernah kita punya.”
-   Teks Master Verbatim dari Perbaikan.txt.
+   Naskah asli & personal: 18 bab teks otentik + 1 bab album penutup (19 halaman).
    ========================================================================== */
 
 export type ChapterVariant = 'cover' | 'text' | 'quote' | 'scrapbook' | 'minimal'
@@ -18,390 +18,499 @@ export interface Chapter {
 }
 
 export const chapters: Chapter[] = [
-  /* ------------------------------------------------------------------------
-     HALAMAN 01
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-01',
-    slug: 'bab-01-sebelum-membuka',
-    title: 'Sebelum kamu membuka halaman ini',
-    subtitle: 'Pelan-pelan aja.',
-    variant: 'text',
-    bodyPlaceholder: [
-      'Aku nggak tau kamu akan membuka halaman ini kapan, atau apakah kamu akan membacanya sampai habis. Tapi aku tetap mau nulis.',
-      'Sebelum masuk lebih jauh, aku pengen bilang dulu: ini bukan bantahan, bukan cara buat bikin kamu merasa bersalah, dan bukan permintaan supaya kamu kembali.',
-      'Ada banyak hal yang selama ini pengen aku ceritain, tapi entah kenapa sering aku simpan sendiri. Kadang karena mikir “nanti aja”, kadang karena takut mengganggu, sampai akhirnya banyak hal yang nggak pernah benar-benar keluar dari aku.',
-      'Kali ini aku coba tulis semuanya di sini. Pelan-pelan, satu per satu.',
-      'Kamu nggak harus langsung baca semuanya. Buka kalau kamu memang lagi siap.',
-      'Kalau nanti kamu berhenti di tengah jalan, juga nggak apa-apa. Aku nggak akan menghitung halaman mana yang sudah kamu baca.',
-      'Nggak ada kewajiban untuk membalas, dan nggak ada jawaban yang harus kamu kasih setelah selesai membaca.',
-    ],
+    "id": "page-01",
+    "slug": "bab-01-sebelum-membuka",
+    "title": "Sebelum kamu membuka halaman ini",
+    "subtitle": "Pelan-pelan aja.",
+    "variant": "text",
+    "bodyPlaceholder": [
+      "Aku nggak tau harus mulai dari mana.",
+      "Ada banyak hal yang selama ini sebenarnya pengen aku ceritain ke kamu, tapi selama kita masih bersama pun aku sering nggak tau gimana cara menyampaikannya. Kadang aku simpan sendiri, kadang aku pikir nanti aja, sampai akhirnya banyak hal yang nggak pernah benar-benar keluar dari aku.",
+      "Jadi kali ini aku coba tulis semuanya di sini.",
+      "Bukan buat maksa kamu kembali.",
+      "Bukan juga buat bikin kamu merasa bersalah atas keputusan yang kamu ambil.",
+      "Aku cuma pengen kamu tau apa yang ada di kepalaku dan di hatiku selama ini. Tentang kita, tentang kesalahan yang baru sekarang bisa aku lihat lebih jelas, tentang hal-hal yang kamu pernah ajarkan ke aku, dan tentang perasaan yang sampai sekarang masih ada.",
+      "Kamu nggak harus langsung baca semuanya.",
+      "Buka kalau kamu memang lagi siap.",
+      "Dan kalau nanti kamu berhenti di tengah jalan pun nggak apa-apa.",
+      "Aku cuma berharap, kalau kamu membacanya, kamu bisa membacanya pelan2.",
+      "Karena ini bukan sesuatu yang aku tulis dalam satu malam."
+    ]
   },
-
-  /* ------------------------------------------------------------------------
-     HALAMAN 02
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-02',
-    slug: 'bab-02-dua-anak',
-    title: 'Dulu, kita cuma dua anak yang nggak tau akan sejauh ini',
-    subtitle: 'Awalnya sesederhana itu.',
-    variant: 'text',
-    bodyPlaceholder: [
-      'Awalnya cuma dari seorang teman. Lama-lama kita jadi sering ngobrol, saling cerita, saling curhat, sampai akhirnya sama-sama punya rasa.',
-      'Aku bahkan nggak inget siapa yang lebih dulu suka. Rasanya kita ngalamin semuanya bareng-bareng.',
-      'Yang paling aku inget justru waktu kita masih suka curi-curi waktu buat ketemu. Kadang cuma buat ngobrol sebentar, bertukar kabar, atau sekadar bisa lihat satu sama lain.',
-      'Waktu itu kita masih MTs.',
-      'Tempatnya bisa di mana aja. Kadang di sela waktu yang kita punya, kadang cuma sebentar. Kita tuker surat, kasih barang kecil, dan melakukan hal-hal sederhana yang kalau dilihat sekarang mungkin kelihatannya nggak seberapa.',
-      'Tapi waktu itu semuanya cukup buat bikin kita senang.',
-      'Dan tanpa kita sadari, dari hal-hal kecil itu kita tumbuh bareng.',
-      'Tujuh tahun.',
-      'Pelan-pelan, tanpa pernah benar-benar tahu awalnya akan sampai sejauh ini.',
-    ],
+    "id": "page-02",
+    "slug": "bab-02-dua-anak",
+    "title": "Dulu, kita cuma dua anak yang nggak tau akan sejauh ini",
+    "subtitle": "Awalnya sesederhana itu.",
+    "variant": "text",
+    "bodyPlaceholder": [
+      "Dulu kita cuma kenal dari temen.",
+      "Terus lanjut chattingan, saling cerita, saling curhat, sampai akhirnya kita sama-sama mulai punya rasa.",
+      "Aku bahkan nggak inget pasti siapa yang lebih dulu suka.",
+      "Rasanya kita ngalamin itu bareng-bareng.",
+      "Yang paling aku inget justru masa ketika kita masih suka curi-curi waktu buat ketemu. Kadang cuma buat ngobrol sebentar, bertukar kabar, atau sekadar bisa lihat satu sama lain.",
+      "Waktu itu kita masih MTs.",
+      "Kita pernah sembunyi2 buat ketemu, tuker surat, kasih barang-barang kecil yang mungkin sekarang kelihatannya sederhana banget.",
+      "Tapi waktu itu hal-hal kecil itu cukup buat bikin kita senyum.",
+      "Dan tanpa kita sadari, dari hal-hal kecil itu kita tumbuh bareng.",
+      "Kita nggak pernah tau waktu itu kalau dua anak yang cuma suka saling curhat ini akhirnya bakal berjalan sejauh tujuh tahun."
+    ]
   },
-
-  /* ------------------------------------------------------------------------
-     HALAMAN 03
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-03',
-    slug: 'bab-03-kalau-aku-mengingat',
-    title: 'Kalau aku mengingat kita',
-    subtitle: 'Aku selalu ingat hal-hal kecil.',
-    variant: 'text',
-    bodyPlaceholder: [
-      'Kalau aku mengingat kita, yang paling sering muncul bukan kejadian besar. Justru hal-hal kecil.',
-      'Masa kelas 12, hampir tiap sore kita jalan-jalan. Kadang cuma buat beli makan, beli jajan, atau muter-muter tanpa tujuan yang jelas.',
-      'Nggak ada yang istimewa dari itu semua. Tapi aku bahagia banget. Sampai sekarang kadang aku masih pengen berhenti di waktu itu aja.',
-      'Aku inget kita pernah kehujanan sore-sore cuma buat jalan-jalan. Bajuku sampai basah kuyup karena aku berusaha nutupin kamu dari hujan, dan malamnya aku malah demam. Kalau dipikir sekarang, lucu juga. Tapi itu salah satu kenangan yang paling nempel.',
-      'Aku inget jalan-jalan malam di Kudus setelah les di GO. Aku inget kita pergi ke Muria cuma buat beli pentol Muria, terus langsung turun lagi.',
-      'Aku inget perjalanan Jepara–Semarang, mampir Indomaret sebentar, jalan-jalan di mall, lihat city light, photo booth, dan foto-foto random yang sampai sekarang masih ada di Google Photos. VC sampai malam. Berteduh waktu hujan. Dulu semua itu mungkin kelihatan biasa aja.',
-      'Dan waktu aku dirawat di Demak, kamu sempat pengen datang menjenguk dari Kudus. Padahal aku sempat melarang karena jauh dan nggak ada yang bisa menemani kamu ke sini. Kamu tetap ngotot pengen datang. Niatmu waktu itu bikin aku ngerasa benar-benar diperhatikan.',
-      'Kita juga pernah ngobrol soal rumah. Soal Solo atau Jepara. Soal anak. Sampai hal kecil seperti membayangkan anak kita sekolah di SDIT Sula.',
-      'Aku nggak membawa semua itu sekarang sebagai tuntutan. Itu cuma bagian dari masa ketika dua orang pernah membayangkan hidup bareng.',
-      'Dulu semua itu terasa biasa karena kita menjalaninya hampir tanpa berpikir. Sekarang aku baru sadar, ternyata banyak bagian hidupku yang tersimpan di dalam hal-hal sederhana itu.',
-    ],
+    "id": "page-03",
+    "slug": "bab-03-mengingat-kita",
+    "title": "Kalau aku mengingat kita",
+    "subtitle": "Aku selalu ingat hal-hal kecil.",
+    "variant": "text",
+    "bodyPlaceholder": [
+      "Kalau aku mengingat kita, ternyata yang paling sering muncul bukan kejadian besar.",
+      "Justru hal-hal kecil.",
+      "Aku inget masa kelas 12.",
+      "Hampir tiap sore kita jalan-jalan. Kadang beli makan, beli jajan, atau cuma muter2 nggak jelas tanpa tujuan.",
+      "Nggak ada sesuatu yang istimewa sebenarnya.",
+      "Tapi waktu itu aku bahagia banget.",
+      "Sampai kadang aku pengen bisa ngestuck di waktu itu aja.",
+      "Aku inget kita pernah menerobos hujan sore2 cuma buat jalan-jalan.",
+      "Bajuku sampai basah kuyup karena aku berusaha nutupin kamu dari hujan, dan malamnya aku malah demam.",
+      "Kalau dipikir sekarang lucu juga.",
+      "Tapi itu salah satu kenangan yang paling aku inget.",
+      "Aku inget jalan-jalan malam menelusuri jalanan Kudus setelah les di GO.",
+      "Aku inget Muria cuma karena kita pengen cari pentol.",
+      "Aku inget perjalanan Jepara-Semarang.",
+      "Mampir Indomaret cuma buat beli sesuatu.",
+      "Jalan tanpa tujuan.",
+      "VC malam.",
+      "Berteduh waktu hujan.",
+      "Jalan-jalan di mall.",
+      "Photo booth.",
+      "Lihat city lights.",
+      "Foto-foto random yang sampai sekarang masih ada di Google Photos.",
+      "Dulu semua itu mungkin terasa biasa.",
+      "Sekarang aku baru sadar, justru hal-hal sederhana itu yang paling susah diganti."
+    ]
   },
-
-  /* ------------------------------------------------------------------------
-     HALAMAN 04
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-04',
-    slug: 'bab-04-melihat-diri-sendiri',
-    title: 'Setelah semuanya berhenti, aku mulai melihat diriku sendiri',
-    subtitle: 'Untuk pertama kalinya aku benar-benar berhenti dan melihat ke belakang.',
-    variant: 'text',
-    bodyPlaceholder: [
-      'Setelah semuanya berhenti, aku punya banyak waktu buat mikir. Bukan cuma kenapa kita bisa sampai di titik ini, tapi juga tentang diriku sendiri.',
-      'Aku kuliah Informatika dan kamu Kedokteran. Aku tetap di Jawa, kamu akhirnya di Banjarmasin. Bahkan kita hidup dengan waktu yang berbeda. WIB dan WITA.',
-      'Yang dulu hampir tiap sore bisa ketemu, lama-lama jadi hubungan yang cuma memungkinkan kita bertemu sekitar setengah tahun sekali.',
-      'Aku nggak mau menyalahkan jarak, kuliah, kesibukan kamu, atau masa PLT kamu. Semua itu memang keadaan yang kita hadapi. Tapi keadaan bukan alasan buat aku menghindari bagian dari diriku yang memang perlu aku lihat.',
-      'Aku juga nggak mau bilang kalau semuanya sepenuhnya salahku. Aku cuma mau jujur bahwa ada bagian dari diriku yang sebelumnya nggak aku lihat.',
-      'Aku sering nggak menginisiasi VC, dan kamu yang lebih sering menelepon lebih dulu. Aku juga sering takut mengganggu waktu kamu sibuk.',
-      'Dulu aku pikir memberi ruang berarti memahami kamu. Sekarang aku sadar, ternyata ada saat-saat ketika kamu mungkin nggak membutuhkan ruang. Kamu membutuhkan kehadiran.',
-      'Dan aku baru benar-benar memahami itu setelah semuanya berhenti.',
-    ],
+    "id": "page-04",
+    "slug": "bab-04-melihat-diri-sendiri",
+    "title": "Setelah semuanya berhenti, aku mulai melihat diriku sendiri",
+    "subtitle": "Untuk pertama kalinya aku benar-benar berhenti dan melihat ke belakang.",
+    "variant": "text",
+    "bodyPlaceholder": [
+      "Setelah semuanya berhenti, aku punya banyak waktu untuk mikir.",
+      "Bukan cuma mikirin kenapa kita bisa sampai di titik ini.",
+      "Tapi juga mikirin diriku sendiri.",
+      "Aku mulai sadar kalau selama ini aku sering merasa sudah melakukan yang terbaik.",
+      "Dan mungkin memang aku berusaha.",
+      "Tapi sekarang aku ngerti, **niat baik dan dampak yang dirasakan orang lain itu nggak selalu sama.**",
+      "Aku bisa merasa sedang perhatian, tapi mungkin kamu tetap merasa sendirian.",
+      "Aku bisa merasa sedang memahami kesibukanmu, tapi mungkin kamu tetap merasa jauh.",
+      "Aku bisa merasa sudah memberikan jawaban yang masuk akal, tapi ternyata itu bukan jawaban yang kamu butuhkan.",
+      "Dan bagian itu yang paling banyak aku pikirkan.",
+      "Aku nggak mau menyalahkan jarak.",
+      "Aku nggak mau menyalahkan kesibukanmu.",
+      "Aku juga nggak mau menyalahkan kamu.",
+      "Aku cuma pengen jujur sama diriku sendiri tentang bagian mana dari diriku yang memang perlu diperbaiki."
+    ]
   },
-
-  /* ------------------------------------------------------------------------
-     HALAMAN 05
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-05',
-    slug: 'bab-05-tentang-perasaanmu',
-    title: 'Tentang perasaanmu yang dulu sering nggak aku mengerti',
-    subtitle: 'Ini mungkin salah satu hal yang paling aku sesali.',
-    variant: 'text',
-    bodyPlaceholder: [
-      'Dulu, kalau kamu menyampaikan sesuatu soal perasaan, aku sering langsung masuk ke mode berpikir dan menjelaskan.',
-      'Contohnya waktu kamu bilang: “aku kok ngerasa jauh gitu sama kamu ya”. Aku malah menjelaskan bahwa kita sama-sama punya kesibukan, kamu sedang PLT, dan kita lagi menjalani banyak hal.',
-      'Sekarang aku sadar, waktu itu kamu nggak sedang meminta penjelasan. Kamu cuma sedang bilang bahwa kamu merasa jauh.',
-      'Seharusnya aku berhenti sebentar. Seharusnya aku bertanya: “Kamu ngerasa jauh yaa? Bagian mana yang paling kerasa buat kamu?” Sesederhana itu.',
-      'Nggak semua cerita butuh solusi. Kadang seseorang cuma mau didengar dulu. Perasaannya diterima dulu. Baru setelah itu, kalau memang dibutuhkan, kita bicara soal jalan keluarnya.',
-      'Dulu polaku: Dengar → Analisis → Jelaskan → Selesaikan.',
-      'Sekarang aku belajar: Dengar → Validasi → Gali → Baru cari solusi kalau memang dibutuhkan.',
-      'Aku terlalu sering berpikir pakai logika ketika kamu sedang bicara dari sisi perasaan. Bukan karena aku nggak peduli. Aku cuma belum cukup belajar memahami cara mencintai dari sisi yang kamu butuhkan. Dan untuk itu, aku minta maaf.',
-    ],
+    "id": "page-05",
+    "slug": "bab-05-tentang-perasaanmu",
+    "title": "Tentang perasaanmu yang dulu sering nggak aku mengerti",
+    "subtitle": "Ini mungkin salah satu hal yang paling aku sesali.",
+    "variant": "text",
+    "bodyPlaceholder": [
+      "Aku sekarang sadar, dulu aku sering terlalu cepat mencari jawaban sebelum benar-benar memahami perasaanmu.",
+      "Ketika kamu bilang:",
+      "**“Aku kok ngerasa jauh gitu sama kamu ya.”**",
+      "Aku malah menjelaskan kalau kita sama-sama punya kesibukan, kamu sedang PLT, dan kita memang sedang menjalani banyak hal.",
+      "Padahal sekarang aku sadar...",
+      "Mungkin waktu itu kamu nggak sedang meminta penjelasan.",
+      "Kamu cuma sedang bilang:",
+      "**“Aku merasa jauh.”**",
+      "Dan mungkin jawaban yang kamu butuhkan waktu itu bukan penjelasan dari aku.",
+      "Mungkin kamu cuma butuh aku bilang:",
+      "**“Kamu ngerasa jauh yaa? Bagian mana yang paling kerasa buat kamu?”**",
+      "Aku baru ngerti sekarang.",
+      "Kadang seseorang nggak butuh kita langsung menyelesaikan perasaannya.",
+      "Kadang dia cuma butuh didengar.",
+      "Aku terlalu sering berpikir dari sisi logika, sementara kamu sedang berbicara dari sisi perasaan.",
+      "Bukan karena aku nggak peduli.",
+      "Aku cuma belum cukup ngerti cara mencintai seseorang dari sisi yang dia butuhkan.",
+      "Dan aku minta maaf untuk itu."
+    ]
   },
-
-  /* ------------------------------------------------------------------------
-     HALAMAN 06
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-06',
-    slug: 'bab-06-yang-kamu-ajar',
-    title: 'Hal-hal yang dulu kamu ajarkan',
-    subtitle: 'Kamu, dulu.',
-    variant: 'quote',
-    bodyPlaceholder: [
-      'ya gimana caranya kamu diruang aku sendiri itu, aku tetep bisa inget km',
-      'Waktu itu mungkin aku belum benar-benar paham. Sekarang aku mulai ngerti. Tentang bagaimana caranya tetap membuat seseorang merasa diingat, bahkan ketika kita nggak sedang berada di dekatnya.',
-      'Kamu juga pernah bilang: “itu pr justru buat kamu.” Dan ternyata memang begitu.',
-      'Kamu pernah mengingatkan aku soal cara mengolah kata-kata dengan baik. Tentang memahami dari hati, bukan cuma dari logika. Tentang memikirkan sesuatu itu etis atau nggak. Tentang jangan terlalu idealis. Tentang harus keluar dari zona nyaman. Tentang lebih perhatian.',
-      'Tentang kalau beli sesuatu, kalau bisa mikirin berdua, bukan cuma diri sendiri. Tentang berbagi dan belajar nggak egois.',
-      'Dulu aku mendengar semuanya seperti nasihat yang berdiri sendiri-sendiri. Sekarang aku melihat satu benang merah di antara semuanya.',
-      'Aku harus belajar melihat orang lain. Bukan cuma melihat apa yang menurutku benar. Aku harus belajar memperhatikan. Bukan cuma menunggu diminta. Aku harus belajar memahami. Bukan cuma menjelaskan.',
-      'Dan aku harus belajar membuat orang yang aku sayang merasa diingat, bukan cuma dicari ketika aku sedang membutuhkannya. Ternyata banyak dari itu yang masih harus aku pelajari.',
-    ],
+    "id": "page-06",
+    "slug": "bab-06-yang-dulu-diajarkan",
+    "title": "Hal-hal yang dulu kamu ajarkan",
+    "subtitle": "Banyak yang baru sekarang benar-benar aku pahami.",
+    "variant": "text",
+    "bodyPlaceholder": [
+      "Aku masih inget kamu pernah bilang:",
+      "**“Ya gimana caranya kamu diruang aku sendiri itu, aku tetep bisa inget km.”**",
+      "Dulu mungkin aku belum benar-benar memahami kalimat itu.",
+      "Sekarang aku mulai ngerti.",
+      "Aku harus belajar membuat orang yang aku sayang merasa **diingat**, bukan cuma dicari.",
+      "Kamu juga pernah ngajarin aku untuk mengolah kata-kata dengan baik.",
+      "Memahami dari hati.",
+      "Memikirkan sesuatu itu bukan cuma soal benar atau salah menurut logikaku, tapi juga bagaimana sesuatu itu diterima oleh orang lain.",
+      "Kamu pernah bilang aku jangan terlalu idealis.",
+      "Aku harus keluar dari zona nyaman.",
+      "Aku harus lebih perhatian.",
+      "Kalau punya sesuatu, kalau bisa berbagi ya berbagi.",
+      "Jangan terlalu memikirkan diri sendiri.",
+      "Dan mungkin dulu aku mendengar semuanya sebagai nasihat satu per satu.",
+      "Sekarang aku melihat semuanya seperti satu kesatuan.",
+      "Kamu sebenarnya sedang ngajarin aku bagaimana menjadi seseorang yang lebih peka terhadap orang yang aku sayang.",
+      "Dan ternyata banyak dari hal itu memang masih harus aku pelajari."
+    ]
   },
-
-  /* ------------------------------------------------------------------------
-     HALAMAN 07
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-07',
-    slug: 'bab-07-aku-belajar',
-    title: 'Aku belajar dari banyak hal',
-    subtitle: 'Ini masih proses, bukan cerita perubahan instan.',
-    variant: 'text',
-    bodyPlaceholder: [
-      'Sejak semuanya berhenti, sekitar sebulan ini aku banyak diam dan banyak mikir. Aku baca ulang percakapan kita. Aku mengingat lagi hal-hal yang pernah kamu keluhkan.',
-      'Aku juga membaca banyak hal dan mendengarkan berbagai sudut pandang. Bukan buat mencari pembenaran. Aku cuma pengen benar-benar ngerti.',
-      'Aku jadi lebih sering bertanya sebelum menyimpulkan. Lebih berusaha memahami sebelum menjelaskan. Dan mulai menerima bahwa sudut pandangku nggak selalu yang paling benar.',
-      'Aku juga belajar bahwa ketika seseorang yang aku sayang sedang mengalami sesuatu yang berat, aku nggak selalu harus punya jawaban.',
-      'Kadang aku cuma perlu ada. Kadang yang dibutuhkan bukan solusi. Cuma seseorang yang mau mendengarkan sampai selesai.',
-      'Aku masih dalam proses. Tapi setidaknya sekarang aku mulai tahu bagian mana dari diriku yang selama ini perlu diperbaiki.',
-    ],
+    "id": "page-07",
+    "slug": "bab-07-belajar-dari-banyak-hal",
+    "title": "Aku belajar dari banyak hal",
+    "subtitle": "Bukan untuk mencari siapa yang salah.",
+    "variant": "text",
+    "bodyPlaceholder": [
+      "Selama sekitar sebulan ini aku benar-benar banyak belajar.",
+      "Aku baca banyak hal.",
+      "Aku dengerin berbagai sudut pandang.",
+      "Aku coba memahami lagi tentang komunikasi, tentang hubungan, tentang bagaimana seseorang menerima perhatian, tentang emosi, dan tentang kesalahan-kesalahan yang mungkin selama ini nggak aku sadari.",
+      "Bukan buat mencari pembenaran.",
+      "Bukan buat menentukan siapa yang paling salah.",
+      "Tapi karena aku pengen ngerti.",
+      "Aku mulai belajar satu pola yang sekarang terus aku coba ingat:",
+      "**Dengar → Validasi → Gali → Baru cari solusi.**",
+      "Bukan:",
+      "**Dengar → Analisis → Jelaskan → Selesaikan.**",
+      "Aku belajar untuk bertanya sebelum berasumsi.",
+      "Belajar untuk memahami sebelum menjelaskan.",
+      "Belajar untuk menerima kalau sudut pandangku nggak selalu menjadi satu-satunya yang benar.",
+      "Dan yang paling penting, aku belajar bahwa ketika seseorang yang aku sayang sedang merasa berat, aku nggak harus selalu punya jawaban.",
+      "Kadang aku cuma perlu ada."
+    ]
   },
-
-  /* ------------------------------------------------------------------------
-     HALAMAN 08
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-08',
-    slug: 'bab-08-belum-berubah',
-    title: 'Aku nggak mau bilang aku sudah berubah',
-    subtitle: 'Aku nggak mau menjanjikan sesuatu yang belum bisa aku buktikan.',
-    variant: 'text',
-    bodyPlaceholder: [
-      'Aku nggak mau bilang aku sudah berubah. Kalimat itu terlalu gampang diucapkan, dan aku belum berhak mengatakannya.',
-      'Aku juga nggak mau bilang aku bakal sempurna. Aku masih manusia. Aku masih bisa salah.',
-      'Yang bisa aku bilang adalah aku sedang belajar. Belajar mendengar lebih baik. Belajar memahami perasaan sebelum buru-buru menjelaskan. Belajar memberi validasi sebelum memberikan saran.',
-      'Belajar jadi lebih peka. Lebih sering bertanya. Lebih hati-hati mengolah kata.',
-      'Aku juga belajar membedakan kapan seseorang cuma ingin didengar dan kapan dia memang meminta pendapat. Dan belajar bagaimana membuat orang yang aku sayang merasa aman untuk bercerita.',
-      'Aku nggak tau perubahan ini akan membawa aku ke mana. Tapi aku tau satu hal. Aku nggak mau berhenti di penyesalan.',
-      'Semua ini juga bukan alat untuk menuntut kamu kembali. Aku melakukannya karena aku sadar memang ada bagian dari diriku yang perlu diperbaiki. Untuk diriku sendiri. Dan untuk siapa pun yang nanti ada dalam hidupku.',
-    ],
+    "id": "page-08",
+    "slug": "bab-08-belum-berubah",
+    "title": "Aku nggak mau bilang aku sudah berubah",
+    "subtitle": "Aku nggak mau menjanjikan sesuatu yang belum bisa aku buktikan.",
+    "variant": "text",
+    "bodyPlaceholder": [
+      "Aku nggak mau bilang:",
+      "**“Aku sudah berubah.”**",
+      "Karena aku rasa kalimat itu terlalu mudah diucapkan.",
+      "Aku juga nggak mau bilang aku bakal jadi sempurna.",
+      "Aku masih manusia.",
+      "Aku masih bisa salah.",
+      "Tapi sekarang setidaknya aku sudah lebih ngerti bagian mana dari diriku yang harus aku perbaiki.",
+      "Aku sedang belajar lebih peka.",
+      "Belajar lebih bisa mendengarkan.",
+      "Belajar nggak buru-buru memberikan solusi.",
+      "Belajar membedakan kapan seseorang cuma ingin didengar dan kapan dia memang meminta pendapat.",
+      "Belajar nggak terlalu idealis sama pikiranku sendiri.",
+      "Belajar lebih berani menunjukkan perasaan.",
+      "Belajar menjadi seseorang yang bisa membuat orang yang aku sayang merasa aman dan nyaman.",
+      "Aku nggak tau nanti perubahan ini akan membawa aku ke mana.",
+      "Tapi aku tau aku nggak mau berhenti di penyesalan.",
+      "Aku pengen semua yang terjadi ini benar-benar membuatku menjadi orang yang lebih baik.",
+      "Bukan cuma untuk kamu.",
+      "Tapi juga untuk diriku sendiri dan orang-orang yang akan ada dalam hidupku nanti."
+    ]
   },
-
-  /* ------------------------------------------------------------------------
-     HALAMAN 09
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-09',
-    slug: 'bab-09-maaf',
-    title: 'Maaf',
-    subtitle: 'Satu per satu, dan spesifik.',
-    variant: 'minimal',
-    bodyPlaceholder: [
-      'Maaf karena ada waktunya aku nggak cukup mendengar kamu.',
-      'Maaf karena aku terlalu cepat menjelaskan.',
-      'Maaf karena aku sering menggunakan logika ketika kamu sedang bicara dari sisi perasaan.',
-      'Maaf karena aku kurang memahami sisi emosional kamu.',
-      'Maaf karena aku jarang menginisiasi VC.',
-      'Maaf karena aku kurang bisa membuat kamu merasa nyaman ketika kita LDR.',
-      'Maaf karena aku terlalu takut mengganggu waktu kamu sibuk.',
-      'Maaf karena niat baikku kadang nggak sampai dengan cara yang baik di kamu.',
-      'Maaf kalau pernah ada waktu ketika kamu merasa sendirian, padahal kamu sedang punya aku.',
-      'Maaf untuk semua kekuranganku selama tujuh tahun. Untuk hal-hal yang sekarang sudah aku sadari. Dan untuk hal-hal yang mungkin baru akan benar-benar aku pahami setelah ini.',
-      'Aku nggak bisa mengulang waktu. Aku juga nggak bisa memperbaiki satu per satu semua yang sudah terjadi. Tapi aku nggak mau semua ini berhenti cuma sebagai penyesalan.',
-    ],
+    "id": "page-09",
+    "slug": "bab-09-maaf",
+    "title": "Maaf",
+    "subtitle": "Satu per satu.",
+    "variant": "text",
+    "bodyPlaceholder": [
+      "Aku minta maaf.",
+      "Karena ada saatnya aku nggak cukup mendengar kamu.",
+      "Karena aku terlalu cepat memikirkan maksudku sendiri.",
+      "Karena ada saatnya kamu mungkin cuma ingin dipahami, tapi aku malah memberikan penjelasan.",
+      "Karena aku kurang sering menginisiasi VC dan membuat komunikasi kita lebih banyak kamu yang memulai.",
+      "Karena aku kurang bisa memahami masalah emosionalmu.",
+      "Karena aku kurang bisa membuatmu merasa nyaman ketika kita sedang LDR.",
+      "Karena aku terlalu takut mengganggu ketika kamu sibuk, sampai akhirnya mungkin justru membuat jarak di antara kita semakin terasa.",
+      "Aku minta maaf untuk semua kekuranganku selama tujuh tahun.",
+      "Untuk kesalahan yang aku sadari.",
+      "Dan untuk kesalahan yang mungkin baru akan aku pahami setelah ini.",
+      "Aku juga minta maaf untuk semua hal yang pernah membuatmu capek, kecewa, merasa sendiri, atau merasa nggak cukup dimengerti.",
+      "Aku nggak bisa mengulang waktu.",
+      "Tapi aku nggak mau semua ini berhenti cuma sebagai penyesalan."
+    ]
   },
-
-  /* ------------------------------------------------------------------------
-     HALAMAN 10
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-10',
-    slug: 'bab-10-tujuh-tahun',
-    title: 'Tujuh tahun yang aku syukuri',
-    subtitle: 'Kalau ditanya apakah aku menyesal pernah memilih kamu, jawabannya nggak.',
-    variant: 'text',
-    bodyPlaceholder: [
-      'Tujuh tahun itu bukan waktu yang sebentar. Kita tumbuh bareng. Dari dua anak yang awalnya cuma saling curhat, sampai akhirnya menjalani banyak fase kehidupan bersama.',
-      'Aku pernah bahagia banget sama kamu. Aku pernah merasa punya partner yang selalu bisa aku ceritain banyak hal.',
-      'Jadi kalau ditanya apakah aku menyesal pernah memilih kamu, jawabannya nggak.',
-      'Aku nggak mau menyebut tujuh tahun ini gagal hanya karena akhirnya kita sampai di titik ini. Ada bagian yang menyakitkan. Ada kesalahan. Ada banyak hal yang seharusnya bisa kulakukan lebih baik.',
-      'Tapi ada juga banyak hal baik yang akan selalu aku syukuri. Sebagian besar diriku yang sekarang juga terbentuk dari tujuh tahun ini.',
-      'Kalau waktu bisa diulang dan aku kembali menjadi aku yang dulu, aku rasa aku tetap akan memilih untuk mengenal kamu. Bukan karena aku ingin mengubah akhir cerita. Tapi karena aku tahu tujuh tahun itu pernah berarti. Dan sampai sekarang pun masih berarti.',
-    ],
+    "id": "page-10",
+    "slug": "bab-10-tujuh-tahun-disyukuri",
+    "title": "Tujuh tahun yang aku syukuri",
+    "subtitle": "Kalau ditanya apakah aku menyesal pernah memilih kamu, jawabannya nggak.",
+    "variant": "text",
+    "bodyPlaceholder": [
+      "Tujuh tahun itu bukan waktu yang sebentar buat aku.",
+      "Kita tumbuh bareng.",
+      "Dari dua anak yang awalnya cuma saling curhat, sampai akhirnya menjalani banyak fase kehidupan bersama.",
+      "Aku pernah bahagia banget sama kamu.",
+      "Aku pernah merasa punya partner yang selalu ada dan mendukungku.",
+      "Aku pernah merasa punya seseorang yang bisa aku ceritain banyak hal.",
+      "Dan aku bersyukur pernah merasakan semua itu.",
+      "Aku nggak mau menganggap tujuh tahun kita gagal hanya karena akhirnya kita sampai di titik ini.",
+      "Ada bagian yang menyakitkan.",
+      "Ada kesalahan.",
+      "Ada hal-hal yang seharusnya bisa aku lakukan lebih baik.",
+      "Tapi ada juga begitu banyak hal baik yang akan selalu aku syukuri.",
+      "Kalau waktu bisa diulang dan aku kembali menjadi diriku yang dulu...",
+      "Aku rasa aku tetap akan memilih kamu.",
+      "Bukan karena aku ingin mengubah akhir cerita.",
+      "Tapi karena tujuh tahun bersamamu tetap menjadi bagian hidup yang sangat berarti buat aku."
+    ]
   },
-
-  /* ------------------------------------------------------------------------
-     HALAMAN 11
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-11',
-    slug: 'bab-11-hal-hal-kecil',
-    title: 'Hal-hal kecil tentang kamu yang masih tinggal',
-    subtitle: 'Kadang yang paling susah hilang justru yang paling sederhana.',
-    variant: 'scrapbook',
-    bodyPlaceholder: [
-      'Nomi. Nopi. Lego bunga-bunga. Bunga yang pernah aku kasih. Surat-surat kecil. Hadiah-hadiah yang pernah kita tukar. Foto random. Foto perjalanan. Panggilan “noney”.',
-      'Hal-hal yang buat orang lain mungkin nggak berarti apa-apa. Tapi buat aku semuanya punya cerita sendiri. Aku masih bisa ingat tempatnya. Harinya. Obrolannya.',
-      'Kadang aku buka Google Photos, nemu foto yang sudah lama nggak aku lihat, lalu tiba-tiba semuanya terasa dekat lagi.',
-      'Nomi, Nopi, atau lego bunga-bunga yang pernah aku kasih — kalau masih ada, tolong rawat dengan sayang yaa. Buat aku, itu bukan cuma benda. Itu bagian kecil dari masa ketika aku pernah mencintai dan menyayangi kamu dengan caraku.',
-      'Aku nggak mau menyimpan semua itu supaya terus hidup di masa lalu. Aku cuma nggak mau berpura-pura bahwa semua itu nggak pernah berarti.',
-    ],
+    "id": "page-11",
+    "slug": "bab-11-hal-kecil-yang-tinggal",
+    "title": "Hal-hal kecil tentang kamu yang masih tinggal",
+    "subtitle": "Kadang yang paling susah hilang justru yang paling sederhana.",
+    "variant": "scrapbook",
+    "bodyPlaceholder": [
+      "Ada banyak hal tentang kamu yang masih tinggal.",
+      "Nomi.",
+      "Nopi.",
+      "Lego bunga-bunga.",
+      "Bunga yang pernah aku kasih.",
+      "Surat-surat kecil.",
+      "Hadiah-hadiah yang pernah kita tukarkan.",
+      "Foto random.",
+      "Foto perjalanan.",
+      "Panggilan **“noney”**.",
+      "Hal-hal kecil yang mungkin buat orang lain nggak berarti apa-apa.",
+      "Tapi buat aku punya cerita sendiri.",
+      "Kadang aku membuka Google Photos dan menemukan foto yang bahkan mungkin sudah lama nggak aku lihat.",
+      "Terus tiba-tiba aku inget lagi tempatnya.",
+      "Hari itu.",
+      "Obrolannya.",
+      "Atau cuma perasaan waktu itu.",
+      "Aku nggak mau menyimpan semua itu untuk membuat diriku terus hidup di masa lalu.",
+      "Aku cuma nggak mau berpura-pura bahwa semua itu nggak pernah berarti.",
+      "Karena memang berarti."
+    ]
   },
-
-  /* ------------------------------------------------------------------------
-     HALAMAN 12
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-12',
-    slug: 'bab-12-tentang-kamu',
-    title: 'Tentang kamu',
-    subtitle: 'Kenapa selama itu aku memilih kamu.',
-    variant: 'text',
-    bodyPlaceholder: [
-      'Aku suka sisi lucumu. Sisi manjamu. Caramu yang kadang butuh aku. Aku suka cara kamu menyayangiku ketika aku sehat maupun ketika aku sakit.',
-      'Aku suka perhatian-perhatian kecilmu. Cara kamu memanggilku “noney”. Cara kamu mengingatkan aku ketika aku salah. Cara kamu memberi saran tentang hidupku.',
-      'Hal-hal yang dulu mungkin terasa biasa, sekarang justru terasa berharga.',
-      'Kamu juga orang yang lembut. Aku tahu kamu nggak cocok dibentak. Nggak cocok diajak bicara dengan nada tinggi. Dan seharusnya aku lebih memahami itu.',
-      'Tapi lebih dari semua sifat itu, ada satu alasan yang menurutku paling besar. Aku nyaman sama kamu.',
-      'Aku nggak cuma suka kamu karena kamu baik sama aku. Aku suka kamu karena sama kamu aku nggak perlu terlalu mikir harus jadi siapa. Bisa cerita hal kecil maupun hal besar. Bisa bercanda. Bisa serius. Bisa jadi diriku sendiri. Aku merasa didengar. Dan aku merasa punya seseorang untuk menjalani perjalanan hidup.',
-      'Dulu kamu adalah orang yang membuat aku nyaman untuk bercerita. Sekarang aku sadar, aku juga seharusnya belajar menjadi orang yang bisa membuat kamu merasa nyaman untuk bercerita.',
-      'Kamu bukan cuma pasangan buat aku. Kamu partner seperjalanan. Dan mungkin itu juga alasan kenapa kehilangan kamu terasa sebesar ini.',
-    ],
+    "id": "page-12",
+    "slug": "bab-12-tentang-kamu",
+    "title": "Tentang kamu",
+    "subtitle": "Kenapa selama itu aku memilih kamu.",
+    "variant": "text",
+    "bodyPlaceholder": [
+      "Aku suka sifat lucumu.",
+      "Aku suka sifat manjamu.",
+      "Aku suka ketika kamu membutuhkan aku.",
+      "Aku suka cara kamu menyayangiku ketika aku sehat maupun ketika aku sakit.",
+      "Aku suka perhatian-perhatian kecilmu.",
+      "Memanggilku “noney”.",
+      "Mengingatkanku ketika aku salah.",
+      "Memberikan saran tentang kehidupanku.",
+      "Bahkan kadang hal yang dulu mungkin terasa biasa, sekarang baru terasa berharga.",
+      "Kamu juga orang yang lembut.",
+      "Aku tahu kamu nggak cocok dibentak.",
+      "Nggak cocok diajak bicara dengan nada tinggi.",
+      "Dan seharusnya aku lebih memahami itu.",
+      "Tapi lebih dari semua sifat itu, aku nyaman sama kamu karena dulu kamu bisa membuat aku merasa aman ketika bercerita.",
+      "Aku bisa cerita apa aja.",
+      "Entah akhirnya kita ketawa, serius, atau cuma ngobrol nggak jelas.",
+      "Rasanya nyaman.",
+      "Kamu bukan cuma pasangan buat aku.",
+      "Kamu partner seperjalanan.",
+      "Seseorang yang membuat hidupku terasa lebih menyenangkan dan lebih berarti.",
+      "Dan mungkin itu juga alasan kenapa kehilangan kamu terasa sebesar ini."
+    ]
   },
-
-  /* ------------------------------------------------------------------------
-     HALAMAN 13
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-13',
-    slug: 'bab-13-kalau-suatu-hari',
-    title: 'Kalau suatu hari...',
-    subtitle: 'Ini bukan permintaan. Cuma sebuah harapan.',
-    variant: 'text',
-    bodyPlaceholder: [
-      'Aku masih sayang kamu. Aku masih mencintai kamu. Aku cuma mau jujur soal itu tanpa menjadikannya alasan untuk menekan kamu.',
-      'Kalau suatu hari kamu sedang tenang, dan kamu sendiri ingin memberi kesempatan, aku nggak ingin sekadar kembali ke hubungan kita yang dulu. Aku pengen kita memulai sesuatu yang baru. Dengan dua orang yang sudah belajar dari apa yang pernah terjadi.',
-      'Karena kalau cuma kembali ke cara yang sama, mungkin kita hanya akan mengulang luka yang sama.',
-      'Kalau itu benar-benar terjadi, aku pengen lebih banyak mendengarkan. Lebih banyak memahami. Lebih peka terhadap hal-hal kecil. Lebih hadir. Bukan lewat janji besar, tapi lewat hal-hal sederhana yang dilakukan setiap hari.',
-      'Aku pengen lebih tahu bagian mana yang paling terasa buat kamu. Dan ketika kamu cerita, aku pengen kamu nggak perlu menjelaskan berkali-kali cuma supaya aku mengerti.',
-      'Tapi semua itu cuma kalau kamu memang mau. Aku nggak akan memaksamu.',
-    ],
+    "id": "page-13",
+    "slug": "bab-13-kalau-suatu-hari",
+    "title": "Kalau suatu hari...",
+    "subtitle": "Ini bukan permintaan. Cuma sebuah harapan.",
+    "variant": "text",
+    "bodyPlaceholder": [
+      "Kalau suatu hari nanti kita dipertemukan lagi...",
+      "Aku nggak tau kita akan menjadi apa.",
+      "Aku juga nggak tau apakah kamu masih akan melihat aku dengan cara yang sama.",
+      "Tapi kalau suatu hari kamu memberikan kesempatan itu, aku nggak ingin sekadar kembali ke hubungan kita yang dulu.",
+      "Aku ingin kita memulai sesuatu yang baru.",
+      "Dengan dua orang yang sudah belajar dari apa yang pernah terjadi.",
+      "Aku ingin bisa lebih mengerti kamu.",
+      "Lebih mendengarkan.",
+      "Lebih peka.",
+      "Lebih bisa membuat kamu merasa aman.",
+      "Aku ingin ketika kamu cerita, kamu nggak lagi merasa harus menjelaskan berkali-kali supaya aku mengerti.",
+      "Aku ingin ketika dunia kamu sedang berat dan rasanya nggak ada yang mendukungmu, kamu tau ada seseorang yang bisa mendengarkanmu tanpa langsung menghakimi atau buru-buru mencari solusi.",
+      "Aku ingin menjadi tempat yang nyaman untuk kamu pulang.",
+      "Tapi semua itu hanya kalau suatu hari kamu sendiri memang menginginkannya.",
+      "Aku nggak akan memaksamu."
+    ]
   },
-
-  /* ------------------------------------------------------------------------
-     HALAMAN 14
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-14',
-    slug: 'bab-14-jalan-kita-berbeda',
-    title: 'Tapi kalau ternyata jalan kita memang berbeda',
-    subtitle: 'Karena pilihan itu tetap milikmu.',
-    variant: 'text',
-    bodyPlaceholder: [
-      'Aku masih berharap. Dan aku nggak mau bohong soal itu.',
-      'Tapi aku juga sadar: berharap nggak memberiku hak untuk minta kamu kembali. Itu hak kamu. Bukan hak aku.',
-      'Kalau jalan kita memang berbeda, aku mungkin tetap sedih. Tetap rindu. Mungkin juga butuh waktu yang panjang untuk benar-benar terbiasa.',
-      'Dulu, kalau hubungan kita hampir berakhir, aku terbiasa membujuk, meyakinkan, dan mencari cara supaya kamu kembali. Waktu itu kita masih dekat. Aku masih bisa menunjukkan usaha itu secara langsung.',
-      'Sekarang aku belajar bahwa nggak semua keputusan bisa dilawan dengan bujukan. Sebagian keputusan justru perlu dihargai.',
-      'Aku nggak mau berpura-pura menerima semua ini dengan mudah. Tapi aku juga nggak mau cintaku berubah menjadi alasan untuk menahan kamu.',
-      'Aku pengen kamu bahagia di jalan kamu. Bahkan kalau kebahagiaan itu ternyata bukan bersamaku.',
-      'Kalau itu yang terjadi, aku tetap ingin tujuh tahun ini menjadi sesuatu yang bisa kita ingat sebagai bagian hidup yang berarti. Bukan trauma. Bukan hutang. Bukan beban.',
-    ],
+    "id": "page-14",
+    "slug": "bab-14-jalan-berbeda",
+    "title": "Tapi kalau ternyata jalan kita memang berbeda",
+    "subtitle": "Karena pilihan itu tetap milikmu.",
+    "variant": "text",
+    "bodyPlaceholder": [
+      "Aku masih berharap.",
+      "Aku nggak mau bohong soal itu.",
+      "Tapi aku juga sadar, berharap bukan berarti aku berhak meminta kamu kembali.",
+      "Kalau ternyata jalan kita memang berbeda, aku mungkin akan tetap sedih.",
+      "Mungkin tetap rindu.",
+      "Mungkin butuh waktu yang panjang untuk benar-benar terbiasa.",
+      "Tapi aku nggak ingin cintaku berubah menjadi sesuatu yang membuat kamu merasa harus memilih aku.",
+      "Kamu punya hidupmu sendiri.",
+      "Kamu punya cita-citamu.",
+      "Kamu punya jalan yang ingin kamu jalani.",
+      "Dan aku ingin kamu bahagia di jalan itu.",
+      "Bahkan kalau suatu hari kebahagiaan itu ternyata bukan bersamaku.",
+      "Aku mungkin nggak bisa langsung menerima semuanya dengan mudah.",
+      "Tapi aku akan belajar.",
+      "Karena mencintai seseorang juga berarti menghargai pilihannya."
+    ]
   },
-
-  /* ------------------------------------------------------------------------
-     HALAMAN 15
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-15',
-    slug: 'bab-15-terima-kasih',
-    title: 'Terima kasih',
-    subtitle: 'Untuk tujuh tahun yang pernah kita punya.',
-    variant: 'text',
-    bodyPlaceholder: [
-      'Terima kasih sudah pernah memilih aku. Terima kasih sudah pernah jadi tempat aku bercerita. Tempat aku curhat tentang hal-hal yang nggak bisa aku ceritain ke siapa pun.',
-      'Terima kasih buat surat-surat kecil dan hadiah-hadiah kecil dulu. Buat martabak Bang Ahmad yang ternyata jadi kesukaanmu. Buat pentol di Muria. Buat jalan-jalan malam di Kudus setelah les. Buat perjalanan Jepara–Semarang. Buat mampir sebentar di Indomaret.',
-      'Buat sore-sore kelas 12 yang cuma muter-muter tanpa tujuan. Buat hujan yang bikin kita berteduh di pinggir jalan. Buat waktu-waktu ketika kita malah memilih menerobos hujan karena takut kesorean dan kamu nggak bisa masuk boarding.',
-      'Terima kasih buat VC sampai malam. Buat photo booth. Buat city lights. Buat foto-foto random yang sampai sekarang masih tersimpan di Google Photos.',
-      'Terima kasih buat semua tawa. Semua obrolan. Semua nasihat. Semua teguran waktu aku salah. Aku jadi lebih baik karena pernah mendengar semua itu.',
-      'Dan terima kasih juga untuk hal-hal yang nggak selalu mudah. Karena dari sana aku belajar banyak hal tentang diriku sendiri.',
-      'Selama tujuh tahun, kamu bukan cuma bagian dari hidupku. Kamu adalah bagian dari hidupku.',
-    ],
+    "id": "page-15",
+    "slug": "bab-15-terima-kasih",
+    "title": "Terima kasih",
+    "subtitle": "Untuk tujuh tahun yang pernah kita punya.",
+    "variant": "text",
+    "bodyPlaceholder": [
+      "Terima kasih sudah pernah memilih aku.",
+      "Terima kasih sudah pernah menjadi tempatku bercerita.",
+      "Terima kasih sudah pernah mendengarkan ceritaku.",
+      "Terima kasih untuk surat-surat kecil.",
+      "Untuk hadiah-hadiah kecil.",
+      "Untuk martabak.",
+      "Untuk pentol.",
+      "Untuk Muria.",
+      "Untuk jalan-jalan di Kudus.",
+      "Untuk les dan perjalanan setelahnya.",
+      "Untuk Jepara-Semarang.",
+      "Untuk berhenti di Indomaret.",
+      "Untuk sore-sore kelas 12 yang cuma muter2 tanpa tujuan.",
+      "Untuk hujan.",
+      "Untuk VC malam.",
+      "Untuk photo booth.",
+      "Untuk city lights.",
+      "Untuk foto-foto random.",
+      "Untuk semua tawa.",
+      "Untuk semua obrolan.",
+      "Bahkan untuk semua pertengkaran dan air mata yang akhirnya mengajarkan sesuatu kepadaku.",
+      "Dan terutama...",
+      "Terima kasih karena selama tujuh tahun kamu sudah menjadi bagian dari hidupku."
+    ]
   },
-
-  /* ------------------------------------------------------------------------
-     HALAMAN 16
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-16',
-    slug: 'bab-16-kalau-kamu-mengingat',
-    title: 'Kalau suatu hari kamu mengingat aku',
-    subtitle: 'Semoga yang muncul bukan cuma hari ketika semuanya berakhir.',
-    variant: 'text',
-    bodyPlaceholder: [
-      'Kalau suatu hari kamu mengingat aku, aku harap yang muncul bukan cuma hari ketika semuanya berakhir.',
-      'Aku harap kamu juga ingat dua anak yang dulu curi-curi waktu buat ketemu. Yang tuker surat. Yang sembunyi-sembunyi supaya bisa bertemu. Yang bisa bahagia cuma karena punya waktu sebentar untuk ngobrol.',
-      'Ingat sore-sore kelas 12 yang cuma buat jajan. Ingat jalanan Kudus setelah les GO. Ingat Muria dan pentol. Ingat hujan yang bikin bajuku basah sampai demam.',
-      'Ingat waktu aku dirawat di Demak dan kamu tetap ngotot pengen datang dari Kudus meskipun aku sempat melarang. Ingat semua hal kecil yang pernah bikin kita ketawa. Termasuk rumah-rumah kecil yang dulu pernah kita bayangkan.',
-      'Nggak perlu merasa bersalah. Nggak perlu merasa terbebani. Aku cuma berharap kalau suatu hari kenangan itu datang, yang ikut datang bukan cuma rasa sakit. Mungkin sedikit hangat. Mungkin sedikit senyum.',
-      'Karena ketika aku mengingat kamu, sekarang memang ada rasa sakitnya. Tapi aku masih bisa menemukan banyak hal yang bikin aku tersenyum.',
-    ],
+    "id": "page-16",
+    "slug": "bab-16-mengingat-aku",
+    "title": "Kalau suatu hari kamu mengingat aku",
+    "subtitle": "Semoga bukan cuma akhirnya yang kamu ingat.",
+    "variant": "text",
+    "bodyPlaceholder": [
+      "Kalau suatu hari nanti kamu mengingat aku...",
+      "Aku nggak ingin kamu cuma mengingat bagaimana semuanya berakhir.",
+      "Kalau bisa, ingat juga dua anak yang dulu saling curhat dan nggak tau akan berjalan sejauh ini.",
+      "Ingat surat-surat kecil.",
+      "Ingat sore-sore kelas 12.",
+      "Ingat kita yang cuma keluar buat beli jajan.",
+      "Ingat jalanan Kudus setelah les GO.",
+      "Ingat Muria dan pentol.",
+      "Ingat hujan yang bikin bajuku basah sampai demam.",
+      "Ingat saat kamu tetap ingin menjengukku dari Kudus ketika aku dirawat di Demak.",
+      "Ingat semua hal kecil yang pernah bikin kita ketawa.",
+      "Nggak perlu merasa bersalah.",
+      "Nggak perlu merasa terbebani.",
+      "Aku cuma berharap kalau suatu hari kamu mengingatku, yang muncul bukan cuma rasa sakit.",
+      "Semoga ada sedikit senyum juga.",
+      "Karena ketika aku mengingat kamu, meskipun sekarang ada rasa sakitnya, aku tetap masih bisa menemukan banyak hal yang membuatku tersenyum."
+    ]
   },
-
-  /* ------------------------------------------------------------------------
-     HALAMAN 17
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-17',
-    slug: 'bab-17-dari-aku-yang-sekarang',
-    title: 'Untuk kamu, dari aku yang sekarang',
-    subtitle: 'Ada banyak hal yang dulu nggak sempat aku katakan.',
-    variant: 'text',
-    bodyPlaceholder: [
-      'Aku nggak tau kamu akan melihat aku seperti apa setelah membaca semua ini. Aku juga nggak tau apakah tulisan ini akan mengubah sesuatu. Dan aku nggak menulis ini untuk mengubah keputusanmu. Aku cuma pengen kamu tahu bahwa aku benar-benar belajar dari semuanya.',
-      'Aku mengingat semua hal yang pernah kamu katakan. Semua yang pernah kamu keluhkan. Semua nasihat yang pernah kamu kasih. Sekarang aku sedang berusaha membawa semua itu ke dalam hidupku. Bukan cuma buat kamu. Tapi juga buat diriku sendiri.',
-      'Aku belajar jadi lebih peka. Lebih bisa mendengar. Lebih bisa memahami. Lebih hati-hati dalam memilih kata. Lebih tahu kapan harus bicara dan kapan cukup mendengarkan.',
-      'Dan lebih sadar bahwa orang yang aku sayang juga perlu merasa aman untuk menjadi dirinya sendiri.',
-      'Kalau suatu hari orang yang masih ingin aku cintai itu ternyata masih kamu, aku akan sangat bersyukur. Karena jujur, sampai sekarang aku masih sayang. Masih mencintai. Masih peduli. Dan sebagian dari diriku masih berharap.',
-      'Aku nggak tau apa yang akan terjadi nanti. Tapi sekarang aku ingin cintaku jadi lebih dewasa daripada sebelumnya.',
-    ],
+    "id": "page-17",
+    "slug": "bab-17-dari-aku-yang-sekarang",
+    "title": "Untuk kamu, dari aku yang sekarang",
+    "subtitle": "Ada banyak hal yang dulu nggak sempat aku katakan.",
+    "variant": "text",
+    "bodyPlaceholder": [
+      "Aku nggak tau kamu akan melihat aku seperti apa setelah membaca ini.",
+      "Aku juga nggak tau apakah tulisan ini akan mengubah sesuatu atau nggak.",
+      "Dan aku nggak mau menjadikan tulisan ini sebagai alat untuk mengubah keputusanmu.",
+      "Aku cuma ingin kamu tau bahwa aku benar-benar belajar dari semuanya.",
+      "Dari kesalahan yang aku lakukan.",
+      "Dari hal-hal yang pernah kamu keluhkan.",
+      "Dari nasihat yang pernah kamu kasih.",
+      "Dari semua hal yang dulu mungkin aku dengar, tapi belum benar-benar aku pahami.",
+      "Sekarang aku sedang berusaha membawa semuanya ke dalam hidupku.",
+      "Aku ingin menjadi orang yang lebih peka.",
+      "Lebih bisa mendengar.",
+      "Lebih bisa memahami.",
+      "Lebih bisa menyesuaikan diri dengan orang yang aku sayang.",
+      "Dan kalau suatu hari aku kembali mencintai seseorang, aku ingin mencintai dia dengan cara yang lebih sehat dari dulu.",
+      "Tapi kalau suatu hari orang itu ternyata masih kamu...",
+      "Aku akan sangat bersyukur.",
+      "Karena jujur, sampai sekarang aku masih sayang.",
+      "Masih mencintai kamu.",
+      "Dan masih menyayangi kamu sepenuh hati."
+    ]
   },
-
-  /* ------------------------------------------------------------------------
-     HALAMAN 18 / ALBUM (page-19)
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-19',
-    slug: 'bab-19-kumpulan-kenangan',
-    title: 'Kumpulan kenangan kita',
-    subtitle: 'Potongan-potongan yang tersimpan.',
-    variant: 'scrapbook',
-    bodyPlaceholder: [
-      'Aku kumpulin foto-foto kita di sini. Bukan buat menahan masa lalu. Cuma biar semua yang pernah kita jalani tetap punya tempat.',
-      'Setiap foto punya ceritanya sendiri. Baca pelan-pelan yaa.',
-    ],
+    "id": "page-18",
+    "slug": "bab-18-halaman-terakhir",
+    "title": "Halaman terakhir",
+    "subtitle": "Pelan-pelan sampai sini.",
+    "variant": "text",
+    "bodyPlaceholder": [
+      "Aku nggak tau setelah halaman ini selesai, apa yang akan kamu rasakan.",
+      "Mungkin biasa aja.",
+      "Mungkin sedih.",
+      "Mungkin marah.",
+      "Mungkin bingung.",
+      "Mungkin nggak merasakan apa-apa.",
+      "Dan semuanya nggak apa-apa.",
+      "Kamu nggak punya kewajiban untuk membalas apa pun setelah membaca ini.",
+      "Aku cuma ingin sekali, untuk pertama kalinya, kamu benar-benar tahu semua yang selama ini jarang aku ceritakan.",
+      "Aku masih sayang kamu.",
+      "Itu nggak berubah.",
+      "Tapi sekarang aku juga belajar bahwa sayang nggak selalu berarti harus memaksa seseorang untuk tetap tinggal.",
+      "Aku akan tetap membawa semua pelajaran dari tujuh tahun kita.",
+      "Tentang mendengarkan.",
+      "Tentang memahami.",
+      "Tentang perhatian.",
+      "Tentang rasa aman.",
+      "Tentang bagaimana menjadi seseorang yang bisa menjadi tempat pulang, bukan hanya seseorang yang ingin dicari ketika merasa kehilangan.",
+      "Dan kalau suatu hari jalan kita bertemu lagi...",
+      "Semoga saat itu kita sudah menjadi dua orang yang lebih siap untuk saling memahami.",
+      "Kalau ternyata tidak...",
+      "Terima kasih.",
+      "Untuk semuanya.",
+      "Untuk tujuh tahun.",
+      "Untuk pernah menjadi partnerku.",
+      "Untuk pernah membuat hidupku terasa lebih menyenangkan.",
+      "Untuk pernah menjadi tempatku bercerita.",
+      "Dan untuk pernah membuatku merasa punya rumah di seseorang.",
+      "Aku akan selalu menghargai itu.",
+      "**Jaga diri baik-baik yaa.**",
+      "**— aku**"
+    ]
   },
-
-  /* ------------------------------------------------------------------------
-     HALAMAN 19 / HALAMAN TERAKHIR (page-18)
-     ------------------------------------------------------------------------ */
   {
-    id: 'page-18',
-    slug: 'bab-18-halaman-terakhir',
-    title: 'Halaman terakhir',
-    subtitle: 'Sampai sini saja.',
-    variant: 'minimal',
-    bodyPlaceholder: [
-      'Kita sampai di sini. Aku nggak tau rasanya semua ini buat kamu. Dan aku juga nggak perlu tahu.',
-      'Kalau semua yang aku tulis di sini terasa apa adanya, biarkan saja seperti itu. Ini bukan sesuatu yang harus kamu tanggung. Bukan sesuatu yang harus kamu jawab.',
-      'Kamu nggak wajib membalas. Nggak wajib punya jawaban. Dan nggak wajib memberi kepastian apa pun. Sesudah ini, keputusan tetap ada di tangan kamu.',
-      'Aku masih sayang kamu. Aku masih menghargai tujuh tahun kita. Dan aku masih menyimpan harapan kecil tentang kemungkinan suatu hari kita bertemu lagi dengan cara yang berbeda.',
-      'Tapi aku juga sedang belajar bahwa mencintai seseorang nggak selalu berarti memaksanya untuk tetap tinggal.',
-      'Pelajaran yang aku bawa dari tujuh tahun ini adalah tentang mendengarkan. Tentang memahami. Tentang perhatian. Tentang rasa aman. Dan tentang bagaimana menjadi seseorang yang nyaman untuk diajak menjalani hidup, bukan cuma dicari ketika sedang merasa kehilangan.',
-      'Kalau suatu hari jalan kita bertemu lagi, aku berharap kita sudah menjadi dua orang yang lebih siap. Lebih dewasa. Dan lebih mampu menjaga satu sama lain.',
-      'Kalau ternyata tidak, aku tetap akan bersyukur pernah mengenalmu. Pernah mencintaimu. Pernah menjadi bagian dari hidupmu. Dan pernah berbagi begitu banyak cerita bersamamu.',
-      'Jaga diri baik-baik yaa.',
-      '— aku',
-    ],
-  },
+    "id": "page-19",
+    "slug": "bab-19-album-kenangan",
+    "title": "Album Kenangan",
+    "subtitle": "Tujuh tahun dalam bingkai-bingkai kecil.",
+    "variant": "scrapbook",
+    "bodyPlaceholder": [
+      "Ada hal-hal yang nggak bisa dijelaskan dengan kata-kata, tapi tersimpan rapi di setiap sudut foto ini.",
+      "Dari masa awal di MTs, hari-hari di MAN, sudut-sudut kota, sampai perjalanan yang pernah kita lewati bareng.",
+      "Setiap foto di bawah punya ceritanya sendiri. Terima kasih untuk tujuh tahun yang pernah ada."
+    ]
+  }
 ]
 
 /** Jumlah halaman total. Dipakai footer & indikator navigasi. */
