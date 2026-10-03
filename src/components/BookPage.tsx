@@ -83,7 +83,11 @@ const PHOTOS_BY_CHAPTER: Record<string, string[]> = {
   ],
   'page-10': ['foto-20'],
   'page-11': ['foto-17', 'foto-26', 'video-nomi', 'foto-nomi-boneka'],
-  'page-12': ['foto-katsukai'],
+  'page-12': [
+    'foto-katsukai',
+    'video-coffeeshop-jepara-1',
+    'video-coffeeshop-jepara-2',
+  ],
   'page-13': ['foto-25'],
   'page-19': [
     'foto-11',

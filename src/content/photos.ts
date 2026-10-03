@@ -115,6 +115,9 @@ export const photos: PhotoEntry[] = [
     type: 'video',
     note: 'Bab 03 - Vlog photobooth Jepara part 2.',
   },
+  /* ------------------------------------------------------------------------
+     BAB 12 — Tentang kamu (foto selfie & video kenangan)
+     ------------------------------------------------------------------------ */
   {
     id: 'foto-katsukai',
     src: '/photos/katsukai-unnes.jpg',
@@ -124,6 +127,28 @@ export const photos: PhotoEntry[] = [
     ratio: '9 / 16',
     position: 'center',
     note: 'Foto selfie makan Katsukai di UNNES.',
+  },
+  {
+    id: 'video-coffeeshop-jepara-1',
+    src: '/photos/vlog-coffeeshop-jepara-1.mp4',
+    caption:
+      'Ngevlog di coffee shop Jepara. Aku lupa tepatnya di mana, tapi suasananya masih kerasa banget.',
+    orientation: 'portrait',
+    ratio: '9 / 16',
+    position: 'center',
+    type: 'video',
+    note: 'Bab 12 - Vlog coffee shop Jepara part 1.',
+  },
+  {
+    id: 'video-coffeeshop-jepara-2',
+    src: '/photos/vlog-coffeeshop-jepara-2.mp4',
+    caption:
+      'Cerita-cerita sambil ketawa lepas berdua. Momen sederhana kayak gini yang selalu bikin kangen.',
+    orientation: 'landscape',
+    ratio: '16 / 9',
+    position: 'center',
+    type: 'video',
+    note: 'Bab 12 - Vlog coffee shop Jepara part 2.',
   },
 
   /* ------------------------------------------------------------------------
