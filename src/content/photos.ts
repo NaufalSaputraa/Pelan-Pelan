@@ -115,6 +115,21 @@ export const photos: PhotoEntry[] = [
     type: 'video',
     note: 'Bab 03 - Vlog photobooth Jepara part 2.',
   },
+
+  /* ------------------------------------------------------------------------
+     BAB 08 — Satu foto nonton film Sore di bioskop
+     ------------------------------------------------------------------------ */
+  {
+    id: 'foto-bioskop-sore',
+    src: '/photos/nonton-bioskop-sore.jpg',
+    caption:
+      'Waktu kamu ngajakin aku nonton film Sore di bioskop. Salah satu momen berdua yang paling bikin kangen.',
+    orientation: 'landscape',
+    ratio: '4 / 3',
+    position: 'center',
+    note: 'Bab 08 - Nonton film Sore di bioskop.',
+  },
+
   /* ------------------------------------------------------------------------
      BAB 12 — Tentang kamu (foto selfie & video kenangan)
      ------------------------------------------------------------------------ */

@@ -81,6 +81,7 @@ const PHOTOS_BY_CHAPTER: Record<string, string[]> = {
     'video-photobooth-jepara-1',
     'video-photobooth-jepara-2',
   ],
+  'page-08': ['foto-bioskop-sore'],
   'page-10': ['foto-20'],
   'page-11': ['foto-17', 'foto-26', 'video-nomi', 'foto-nomi-boneka'],
   'page-12': [
