@@ -116,6 +116,17 @@ export const photos: PhotoEntry[] = [
     note: 'Bab 03 - Vlog photobooth Jepara part 2.',
   },
   {
+    id: 'video-photobooth-jepara-live',
+    src: '/photos/video-photobooth-jepara-live.mp4',
+    caption:
+      'Live photobooth di Jepara. Outfitnya lucu, cuma kemejaku nggak muat jadi nggak dikancingin.',
+    orientation: 'landscape',
+    ratio: '16 / 9',
+    position: 'center',
+    type: 'video',
+    note: 'Bab 03 - Live video photobooth Jepara.',
+  },
+  {
     id: 'video-jepara-pagi-bri',
     src: '/photos/vlog-jepara-pagi-bri.mp4',
     caption:
@@ -185,6 +196,16 @@ export const photos: PhotoEntry[] = [
     position: 'center',
     type: 'video',
     note: 'Bab 12 - Video momen gemes.',
+  },
+  {
+    id: 'foto-cafe-jepara-kota',
+    src: '/photos/foto-cafe-jepara-kota.jpg',
+    caption:
+      'Di salah satu cafe Jepara Kota. Lupa nama tempatnya, tapi nggak akan pernah lupa kenangan waktu ke sana bareng kamu.',
+    orientation: 'portrait',
+    ratio: '9 / 16',
+    position: 'center',
+    note: 'Bab 12 - Foto cafe di Jepara Kota.',
   },
 
   /* ------------------------------------------------------------------------

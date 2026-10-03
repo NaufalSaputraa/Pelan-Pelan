@@ -80,6 +80,7 @@ const PHOTOS_BY_CHAPTER: Record<string, string[]> = {
     'foto-24',
     'video-photobooth-jepara-1',
     'video-photobooth-jepara-2',
+    'video-photobooth-jepara-live',
     'video-jepara-pagi-bri',
   ],
   'page-08': ['foto-bioskop-sore'],
@@ -95,6 +96,7 @@ const PHOTOS_BY_CHAPTER: Record<string, string[]> = {
   'page-12': [
     'foto-katsukai',
     'video-momen-gemes',
+    'foto-cafe-jepara-kota',
     'video-coffeeshop-jepara-1',
     'video-coffeeshop-jepara-2',
   ],
