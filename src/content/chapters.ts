@@ -371,7 +371,7 @@ export const chapters: Chapter[] = [
       "Bahkan kalau suatu hari kebahagiaan itu ternyata bukan bersamaku.",
       "Aku mungkin nggak bisa langsung menerima semuanya dengan mudah.",
       "Tapi aku akan belajar.",
-      "Karena mencintai seseorang juga berarti menghargai pilihannya."
+      "Karena bukankah titik tertinggi mencintai seseorang adalah dengan belajar merelakannya?"
     ]
   },
   {
