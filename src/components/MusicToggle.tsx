@@ -24,15 +24,13 @@ import { useEffect, useRef, useState } from 'react'
  *    dicegat, jempol akan mengganti halaman DAN menyalakan musik sekaligus.
  */
 
-/** Volume awal: cukup terasa, cukup pelan untuk tetap bisa membaca. */
-const DEFAULT_VOLUME = 0.6
+/** Volume awal: cukup terasa, cukup pelan dan hangat untuk menemani membaca. */
+const DEFAULT_VOLUME = 0.5
 
 /**
- * File ada di `public/music/`. Folder `public/` tidak ikut dibundel, jadi
- * URL-nya persis seperti nama file-nya (harus diawali `/`).
- * ⚠️ Ganti SESUAI kebutuhan: satu file = satu lagu.
+ * File ada di `public/music/`.
  */
-const MUSIC_SRC = '/music/kota-ini-tak-sama-tanpamu.mp3'
+const MUSIC_SRC = '/music/dunia-yang-nanti.mp3'
 
 export default function MusicToggle() {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -72,7 +70,7 @@ export default function MusicToggle() {
       // Volume diset ulang tiap mulai: panel HP bisa mematikan suara, dan
       // tombol ini sengaja tidak punya slider.
       audio.volume = DEFAULT_VOLUME
-      showToast('Kota ini tak sama tanpamu', 3500)
+      showToast('Dunia Yang Nanti — Raim Laode', 3500)
       await audio.play()
       setIsPlaying(true)
     } catch {
