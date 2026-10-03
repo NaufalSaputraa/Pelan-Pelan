@@ -188,7 +188,7 @@ export const photos: PhotoEntry[] = [
   },
 
   /* ------------------------------------------------------------------------
-     BAB 10 — Satu foto perpisahan MAN
+     BAB 10 — Tujuh tahun yang disyukuri (foto MAN + PAP cantik)
      ------------------------------------------------------------------------ */
   {
     id: 'foto-20',
@@ -200,6 +200,25 @@ export const photos: PhotoEntry[] = [
     ratio: '9 / 16',
     position: 'center',
     note: 'Bab 10 - Hari terakhir MAN.',
+  },
+  {
+    id: 'foto-pap-cantik-1',
+    src: '/photos/pap-cantik-1.jpg',
+    caption: 'PAP cantik yang selalu bikin senyum.',
+    orientation: 'portrait',
+    ratio: '9 / 16',
+    position: 'center',
+    note: 'Bab 10 - PAP cantik 1.',
+  },
+  {
+    id: 'foto-pap-cantik-2',
+    src: '/photos/pap-cantik-2.jpg',
+    caption:
+      'Melihat foto ini selalu bikin aku bersyukur pernah punya kamu selama tujuh tahun ini.',
+    orientation: 'portrait',
+    ratio: '9 / 16',
+    position: 'center',
+    note: 'Bab 10 - PAP cantik 2.',
   },
 
   /* ------------------------------------------------------------------------
