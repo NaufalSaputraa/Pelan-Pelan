@@ -216,7 +216,8 @@ export const chapters: Chapter[] = [
       "Tapi aku tau aku nggak mau berhenti di penyesalan.",
       "Aku pengen semua yang terjadi ini benar-benar membuatku menjadi orang yang lebih baik.",
       "Bukan cuma untuk kamu.",
-      "Tapi juga untuk diriku sendiri dan orang-orang yang akan ada dalam hidupku nanti."
+      "Tapi juga untuk diriku sendiri dan orang-orang yang akan ada dalam hidupku nanti.",
+      "Dan kalau boleh berharap, aku tetap pengen bareng kamu saat aku sudah jadi lebih baik nanti."
     ]
   },
   {
