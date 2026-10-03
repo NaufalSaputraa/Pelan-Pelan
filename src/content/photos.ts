@@ -120,7 +120,7 @@ export const photos: PhotoEntry[] = [
   },
 
   /* ------------------------------------------------------------------------
-     BAB 11 — Dua foto scrapbook kenangan kecil
+     BAB 11 — Scrapbook kenangan kecil (foto + video)
      ------------------------------------------------------------------------ */
   {
     id: 'foto-17',
@@ -141,6 +141,27 @@ export const photos: PhotoEntry[] = [
     ratio: '9 / 16',
     position: 'center',
     note: 'Bab 11 - Gramedia Semarang sebelum renov.',
+  },
+  {
+    id: 'video-nomi',
+    src: '/photos/belajar-bareng-nomi.mp4',
+    caption:
+      'Waktu kamu belajar ditemenin Nomi. Momen-momen kecil kayak gini yang selalu bikin senyum.',
+    orientation: 'portrait',
+    ratio: '9 / 16',
+    position: 'center',
+    type: 'video',
+    note: 'Bab 11 - Video belajar bareng Nomi.',
+  },
+  {
+    id: 'foto-nomi-boneka',
+    src: '/photos/nomi-dan-boneka.jpg',
+    caption:
+      'Nomi sama bonekamu yang aku lupa namanya (maaf yaa). Walau aku nggak punya foto bareng Nopi dan Nomi langsung, mereka tetap jadi bagian yang selalu aku inget.',
+    orientation: 'portrait',
+    ratio: '9 / 16',
+    position: 'center',
+    note: 'Bab 11 - Foto Nomi dan boneka.',
   },
 
   /* ------------------------------------------------------------------------
