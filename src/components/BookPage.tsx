@@ -41,74 +41,103 @@ interface BookPageProps {
 }
 
 /**
- * Peta foto per halaman: id halaman → DAFTAR id slot di `photos.ts`.
+ * Peta inline media: id halaman → { paragraphIndex → DAFTAR id slot }.
  *
- * Sengaja berupa array, bukan satu string, karena dua halaman sekarang
- * memakai grid multi-foto (Bab 11 dan album penutup Bab 19). Interface
- * terkecil yang bisa dipakai ulang: satu halaman boleh punya 0..n foto,
- * dan halaman lain tetap cukup menulis satu elemen.
+ * Kunci angka = index paragraf (0-based) di `bodyPlaceholder`. Media yang
+ * terdaftar di index itu ditampilkan SETELAH paragraf tersebut — pembaca
+ * baca teks dulu, baru lihat foto/video yang relevan.
  *
- * Keduanya melewati `ScrapbookPage` yang sama — grid, tilt selang-seling,
- * caption per foto, dan reveal berjenjang tidak perlu ditulis ulang.
+ * Halaman yang tidak ada di peta ini (atau paragraf tanpa entri) merender
+ * murni teks tanpa sisipan — tidak ada satu piksel pun yang berubah.
  *
- * SATU SLOT = SATU BAB. Album penutup (Bab 19) sudah 13/13 foto asli:
- * `foto-11`..`foto-15` (awal di MAN + classmeet), `foto-21`..`foto-23` (set
- * kelulusan MAN), `foto-16` (main PS di Kudus), `foto-27` (Azko Kudus), lalu
- * trio `foto-28`..`foto-30` (photobooth LDR pertama) di akhir. Tidak ada
- * bingkai kosong di album lagi.
- * Halaman variant 'text' yang punya foto — `page-02` (dua foto: `foto-1`
- * fotbar MTs + `foto-18` bukber MTs), `page-03` (dua foto: `foto-19` photo
- * booth Kota Lama + `foto-24` photo booth Jepara), `page-10` (`foto-20` hari
- * terakhir MAN), dan `page-13` (`foto-25` sunset favorit) — semuanya melewati
- * array yang sama di `TextPage`, jadi tidak perlu komponen baru: foto
- * ditumpuk vertikal, bukan grid dua kolom.
- * `foto-17` tetap milik grid Bab 11 — grid itu 2 item saja (`foto-17`
- * photocard + `foto-26` Gramedia Semarang), jadi tiga bingkai kosong yang
- * pernah ada di sana (`foto-5`, `foto-10`, `foto-7`) sengaja dikeluarkan dari
- * peta. Definisinya di photos.ts sengaja DIBIARKAN supaya slot itu bisa
- * dipakai lagi nanti tanpa bikin ulang.
- * `foto-2`..`foto-10` selain `foto-17` seluruhnya belum dipetakan (termasuk
- * `foto-6` photo booth), jadi tidak ada slot foto yang tampil di dua bab.
+ * Halaman scrapbook (Bab 11 & 19) tetap memakai grid, bukan inline, jadi
+ * mereka punya peta sendiri di `SCRAPBOOK_PHOTOS` di bawah.
  *
- * Hapus entri di sini begitu keputusan foto pindah ke chapters.ts.
+ * ATURAN BARU: foto ditaruh tepat setelah kalimat yang dibahasnya, bukan
+ * ditumpuk di atas semua teks. Misal foto DP Mall ditaruh setelah kalimat
+ * "Jalan-jalan di mall." dan photo booth setelah "Photo booth."
  */
-const PHOTOS_BY_CHAPTER: Record<string, string[]> = {
-  'page-02': ['foto-1', 'foto-18'],
-  'page-03': [
-    'foto-19',
-    'video-1',
-    'foto-24',
-    'video-photobooth-jepara-1',
-    'video-photobooth-jepara-2',
-    'video-photobooth-jepara-live',
-    'video-jepara-pagi-bri',
-    'foto-dp-mall',
-  ],
-  'page-08': ['foto-bioskop-sore'],
-  'page-10': ['foto-20', 'foto-pap-cantik-1', 'foto-pap-cantik-2'],
+const INLINE_MEDIA_MAP: Record<string, Record<number, string[]>> = {
+  /* Bab 02 — fotbar MTs + bukber MTs. Ditaruh di akhir bab (setelah paragraf
+     terakhir index 9) supaya teks nostalgia dibaca dulu baru lihat foto. */
+  'page-02': {
+    9: ['foto-1', 'foto-18'],
+  },
+  /* Bab 03 — "Kalau aku mengingat kita"
+     Index 13 = "Aku inget perjalanan Jepara-Semarang."
+     Index 18 = "Jalan-jalan di mall."
+     Index 19 = "Photo booth." */
+  'page-03': {
+    13: [
+      'video-1',
+      'video-jepara-pagi-bri',
+      'foto-dimsum-jepara',
+      'video-jepara-lamongan-malam',
+    ],
+    18: ['foto-dp-mall'],
+    19: [
+      'foto-19',
+      'foto-24',
+      'video-photobooth-jepara-1',
+      'video-photobooth-jepara-2',
+      'video-photobooth-jepara-live',
+    ],
+  },
+  /* Bab 08 — foto nonton bioskop Sore. Di akhir bab (index 19). */
+  'page-08': {
+    19: ['foto-bioskop-sore'],
+  },
+  /* Bab 10 — tujuh tahun yang disyukuri. Di akhir (index 19). */
+  'page-10': {
+    19: ['foto-20', 'foto-pap-cantik-1', 'foto-pap-cantik-2'],
+  },
+  /* Bab 12 — "Tentang kamu". Di akhir (index 33). */
+  'page-12': {
+    33: [
+      'foto-katsukai',
+      'foto-butterhub',
+      'video-momen-gemes',
+      'foto-cafe-jepara-kota',
+      'video-coffeeshop-jepara-1',
+      'video-coffeeshop-jepara-2',
+    ],
+  },
+  /* Bab 13 — "Kalo suatu hari..." Di akhir (index 25). */
+  'page-13': {
+    25: ['foto-25', 'video-pantai-prau'],
+  },
+  /* Bab 14 — jalan berbeda / jujur masih berharap. Di akhir (index 43). */
+  'page-14': {
+    43: ['foto-pap-favorit-1', 'foto-pap-favorit-2'],
+  },
+  /* Bab 15 — terima kasih. Di akhir (index 47). */
+  'page-15': {
+    47: [
+      'video-pagi-favorit',
+      'foto-photobooth-mef',
+      'video-photobooth-mef',
+    ],
+  },
+  /* Bab 16 — mengingat aku. Di akhir (index 29). */
+  'page-16': {
+    29: ['foto-bandara-banjarmasin'],
+  },
+}
+
+/**
+ * Peta foto untuk halaman scrapbook — grid 2-kolom, bukan inline.
+ * Bab 11 & 19 tetap memakai model lama (array flat).
+ */
+const SCRAPBOOK_PHOTOS: Record<string, string[]> = {
   'page-11': [
     'foto-17',
     'foto-26',
     'video-nomi',
     'foto-nomi-boneka',
+    'foto-photobooth-meja-belajar',
     'video-tiktok-cantik-1',
     'video-tiktok-cantik-2',
   ],
-  'page-12': [
-    'foto-katsukai',
-    'video-momen-gemes',
-    'foto-cafe-jepara-kota',
-    'video-coffeeshop-jepara-1',
-    'video-coffeeshop-jepara-2',
-  ],
-  'page-13': ['foto-25', 'video-pantai-prau'],
-  'page-14': ['foto-pap-favorit-1', 'foto-pap-favorit-2'],
-  'page-15': [
-    'video-pagi-favorit',
-    'foto-photobooth-mef',
-    'video-photobooth-mef',
-  ],
-  'page-16': ['foto-bandara-banjarmasin'],
   'page-19': [
     'foto-11',
     'foto-12',
@@ -219,11 +248,24 @@ export default function BookPage({
 }: BookPageProps) {
   const paragraphs = chapter.bodyPlaceholder
 
-  // Semua slot yang terdaftar untuk halaman ini. Id yang tidak ditemukan di
-  // photos.ts dilewat senyap — halaman tetap valid tanpa foto itu.
-  const photos = (PHOTOS_BY_CHAPTER[chapter.id] ?? [])
+  // Foto untuk halaman scrapbook (grid 2-kolom).
+  const scrapbookPhotos = (SCRAPBOOK_PHOTOS[chapter.id] ?? [])
     .map((photoId) => getPhotoById(photoId))
     .filter((photo): photo is PhotoEntry => Boolean(photo))
+
+  // Inline media map untuk halaman text — diresolved ke PhotoEntry.
+  const rawInlineMap = INLINE_MEDIA_MAP[chapter.id]
+  const inlineMediaMap: Record<number, PhotoEntry[]> = {}
+  if (rawInlineMap) {
+    for (const [idx, ids] of Object.entries(rawInlineMap)) {
+      const resolved = ids
+        .map((id) => getPhotoById(id))
+        .filter((p): p is PhotoEntry => Boolean(p))
+      if (resolved.length > 0) {
+        inlineMediaMap[Number(idx)] = resolved
+      }
+    }
+  }
 
   return (
     <article className="mx-auto w-full max-w-book px-5 pt-9 pb-6 sm:px-6 sm:pt-12">
@@ -231,8 +273,6 @@ export default function BookPage({
         <CoverPage
           chapter={chapter}
           paragraphs={paragraphs}
-          photo={photos[0]}
-          onSelectPhoto={onSelectPhoto}
         />
       )}
 
@@ -244,7 +284,7 @@ export default function BookPage({
         <TextPage
           chapter={chapter}
           paragraphs={paragraphs}
-          photos={photos}
+          inlineMedia={inlineMediaMap}
           onSelectPhoto={onSelectPhoto}
         />
       )}
@@ -257,7 +297,7 @@ export default function BookPage({
         <ScrapbookPage
           chapter={chapter}
           paragraphs={paragraphs}
-          photos={photos}
+          photos={scrapbookPhotos}
           introFirst={INTRO_BEFORE_GRID.has(chapter.id)}
           onSelectPhoto={onSelectPhoto}
         />
@@ -285,13 +325,9 @@ export default function BookPage({
 function CoverPage({
   chapter,
   paragraphs,
-  photo,
-  onSelectPhoto,
 }: {
   chapter: Chapter
   paragraphs: string[]
-  photo?: ReturnType<typeof getPhotoById>
-  onSelectPhoto?: (photo: PhotoEntry) => void
 }) {
   return (
     <div className="flex min-h-[calc(100dvh-15rem)] flex-col justify-center py-8">
@@ -320,16 +356,9 @@ function CoverPage({
         </p>
       )}
 
-      {/* Foto kecil opsional — otomatis jadi placeholder kalau file belum ada. */}
-      {photo && (
-        <div className="mt-10 max-w-[15rem] animate-fade-in" style={reveal(3)}>
-          <PhotoPlaceholder photo={photo} ratio="4 / 3" onSelect={onSelectPhoto} />
-        </div>
-      )}
-
       <div
         className="mt-9 max-w-[34ch] animate-fade-in space-y-5 font-body-serif text-[1rem] leading-[1.85] text-charcoal-soft"
-        style={reveal(4)}
+        style={reveal(3)}
       >
         {paragraphs.map((text, i) => (
           <p key={i} className="break-words">
@@ -342,39 +371,40 @@ function CoverPage({
 }
 
 /**
- * Halaman baca — hairline, judul, subtitle, foto sisipan, teks.
+ * Halaman baca — hairline, judul, subtitle, lalu paragraf dengan media inline.
  *
- * Foto (0..n slot dari `photos.ts`) diletakkan DI ANTARA subtitle dan paragraf
- * pertama: pembaca sudah punya konteks dari judul + subtitle, lalu ketemu
- * gambarnya, baru masuk ke paragraf yang panjang. Foto ada dijilid di
- * antara keduanya.
+ * Media (foto/video) disisipkan DI ANTARA paragraf, tepat setelah kalimat
+ * yang dibahasnya. Mapping disediakan oleh `INLINE_MEDIA_MAP`: kunci = index
+ * paragraf, nilai = daftar foto yang ditampilkan SETELAH paragraf itu.
  *
- * Kalau halamannya tidak punya foto, blok foto tidak dirender sama sekali,
- * jadi bab text tanpa foto TIDAK berubah satu piksel pun — termasuk langkah
- * reveal blok paragraf, yang tetap `reveal(3)` seperti semula.
+ * Halaman tanpa entri di peta TIDAK berubah satu piksel pun — semua paragraf
+ * dirender biasa tanpa sisipan, dengan langkah reveal yang sama persis.
  *
- * Bingkai memakai `PhotoPlaceholder` yang sama dengan CoverPage/ScrapbookPage,
- * jadi caption per foto, rasio, grain, dan fallback ke bingkai kosong
- * otomatis sama. Tumpukannya vertikal dengan `space-y-10` (jarak lega),
- * tiap sel memakai `w-full` + `max-w-[26rem]` supaya di 360px (320px setelah
- * padding) tidak memaksa lebar; pelebaran akibat rotasi kecil (~2px per sisi)
- * masih jauh di dalam padding halaman. Tilt selang-seling kecil lewat
- * `TEXT_STACK_TILT` (±0.6-0.7°, arah dibalik dari grid scrapbook).
- *
- * Ritme teks TIDAK berubah: `mt-9` + `space-y-6` antar paragraf tetap sama.
+ * Bingkai memakai `PhotoPlaceholder` yang sama, tilt kecil lewat
+ * `TEXT_STACK_TILT`, dan shadow menempel ke bingkai.
  */
 function TextPage({
   chapter,
   paragraphs,
-  photos,
+  inlineMedia,
   onSelectPhoto,
 }: {
   chapter: Chapter
   paragraphs: string[]
-  photos: PhotoEntry[]
+  inlineMedia: Record<number, PhotoEntry[]>
   onSelectPhoto?: (photo: PhotoEntry) => void
 }) {
-  const hasPhotos = photos.length > 0
+  // Precompute running photo offset per paragraph so we can derive tilt index
+  // without mutating state during render (avoids React Compiler warning).
+  const photoOffsets: number[] = []
+  let runningTotal = 0
+  for (let i = 0; i < paragraphs.length; i++) {
+    photoOffsets.push(runningTotal)
+    const mediaAtI = inlineMedia[i]
+    if (mediaAtI) {
+      runningTotal += mediaAtI.length
+    }
+  }
 
   return (
     <div className="pt-3">
@@ -398,42 +428,43 @@ function TextPage({
         </p>
       )}
 
-      {/* Tumpukan foto sisipan — hanya kalau halaman ini punya slot di peta.
-          Bab 02 (foto-1, foto-18) yang memakainya; bab text lain kosong dan
-          melewati blok ini. Bayangan menempel ke bingkai (PhotoPlaceholder
-          meneruskan className ke frame-nya) dan ikut miring bareng foto. */}
-      {hasPhotos && (
-        <div className="mt-9 space-y-10">
-          {photos.map((photo, i) => (
-            <div
-              key={photo.id}
-              className={`w-full max-w-[26rem] origin-top-left ${TEXT_STACK_TILT[i % TEXT_STACK_TILT.length]} animate-fade-in`}
-              style={revealGrid(i, 200)}
-            >
-              <PhotoPlaceholder
-                photo={photo}
-                onSelect={onSelectPhoto}
-                className="shadow-[0_12px_26px_-22px_rgba(43,43,43,0.65)]"
-              />
-            </div>
-          ))}
-        </div>
-      )}
-
-      {/* Jarak panjang dari judul ke paragraf pertama: ritme halaman baca.
-          `mt-9` + `space-y-6` tidak disentuh — blok foto hanya menyisip di
-          atasnya. Langkah reveal dihitung: `reveal(3)` kalau halaman tanpa
-          foto (persis seperti semula), `reveal(4)` kalau ada foto, supaya
-          blok terakhir tetap bergiliran setelah hairline/judul/subtitle. */}
+      {/* Paragraf + inline media: loop setiap paragraf, lalu cek apakah ada
+          media yang harus disisipkan setelah paragraf itu. */}
       <div
-        className="mt-9 animate-fade-in space-y-6 font-body-serif text-body-serif text-charcoal"
-        style={reveal(hasPhotos ? 4 : 3)}
+        className="mt-9 animate-fade-in font-body-serif text-body-serif text-charcoal"
+        style={reveal(3)}
       >
-        {paragraphs.map((text, i) => (
-          <p key={i} className="break-words">
-            {renderInlineFormatted(text)}
-          </p>
-        ))}
+        {paragraphs.map((text, i) => {
+          const mediaAfter = inlineMedia[i]
+          const baseOffset = photoOffsets[i]
+          return (
+            <div key={i}>
+              <p className={`break-words ${i > 0 ? 'mt-6' : ''}`}>
+                {renderInlineFormatted(text)}
+              </p>
+              {mediaAfter && mediaAfter.length > 0 && (
+                <div className="mt-8 mb-8 space-y-10">
+                  {mediaAfter.map((photo, j) => {
+                    const tiltIdx = baseOffset + j
+                    return (
+                      <div
+                        key={photo.id}
+                        className={`w-full max-w-[26rem] origin-top-left ${TEXT_STACK_TILT[tiltIdx % TEXT_STACK_TILT.length]} animate-fade-in`}
+                        style={revealGrid(tiltIdx, 200)}
+                      >
+                        <PhotoPlaceholder
+                          photo={photo}
+                          onSelect={onSelectPhoto}
+                          className="shadow-[0_12px_26px_-22px_rgba(43,43,43,0.65)]"
+                        />
+                      </div>
+                    )
+                  })}
+                </div>
+              )}
+            </div>
+          )
+        })}
       </div>
     </div>
   )

@@ -42,7 +42,7 @@ export const photos: PhotoEntry[] = [
     id: 'foto-1',
     src: '/photos/fotbar-pertama-mts.jpg',
     caption:
-      'Fotbar pertama kita waktu MTs. Kalau dipikir sekarang, lucu juga. Dari foto sesederhana ini, ceritanya ternyata bisa sampai sejauh itu.',
+      'Fotbar pertama kita waktu MTs. Kalo dipikir sekarang, lucu juga. Dari foto sesederhana ini, ceritanya ternyata bisa sampai sejauh itu.',
     orientation: 'landscape',
     // File asli 1280x720 = 16:9 persis. ratio '16 / 9' mencegah sisi kiri/kanan terpotong.
     ratio: '16 / 9',
@@ -53,20 +53,20 @@ export const photos: PhotoEntry[] = [
     id: 'foto-18',
     src: '/photos/bukber-mts.jpg',
     caption:
-      'Bukber pertama kita setelah lulus MTs, waktu masa COVID. Kalau lihat foto ini sekarang, aku masih inget suasananya. Dan jujur, kamu cantik banget waktu itu.',
+      'Bukber pertama kita setelah lulus MTs, waktu masa COVID. Kalo lihat foto ini sekarang, aku masih inget suasananya. Dan jujur, kamu cantik banget waktu itu.',
     orientation: 'portrait',
     position: 'center',
     note: 'Bab 02 - Bukber pertama MTs era COVID.',
   },
 
   /* ------------------------------------------------------------------------
-     BAB 03 — Dua foto photo booth kenangan jalan-jalan
+     BAB 03 — Dua foto photo booth kenangan jalan2
      ------------------------------------------------------------------------ */
   {
     id: 'foto-19',
     src: '/photos/photobooth-kotalama.jpg',
     caption:
-      'Photo booth Kota Lama. Waktu itu Kota Lama lagi sepi karena gerimis. Setelahnya kita jalan sambil lihat jalanan dan city light sebelum pulang.',
+      'Photo booth Kota Lama. Waktu itu Kota Lama lagi sepi karna gerimis. Setelahnya kita jalan sambil lihat jalanan dan city light sebelum pulang.',
     orientation: 'portrait',
     position: 'center',
     note: 'Bab 03 - Photo booth Kota Lama.',
@@ -75,7 +75,7 @@ export const photos: PhotoEntry[] = [
     id: 'foto-24',
     src: '/photos/photobooth-jepara.jpg',
     caption:
-      'Photo booth Jepara. Kayaknya ini salah satu photo booth terakhir kita. Outfitmu selalu bagus, dan entah kenapa foto-foto seperti ini sekarang terasa jauh lebih berharga.',
+      'Photo booth Jepara. Kayaknya ini salah satu photo booth terakhir kita. Outfitmu selalu bagus, dan entah kenapa foto2 seperti ini sekarang terasa jauh lebih berharga.',
     orientation: 'portrait',
     // File asli 853x1280 = 2:3 rasio.
     ratio: '2 / 3',
@@ -138,6 +138,27 @@ export const photos: PhotoEntry[] = [
     note: 'Bab 03 - Vlog pagi di Jepara Kota & BRI.',
   },
   {
+    id: 'foto-dimsum-jepara',
+    src: '/photos/dimsum-alun-alun-jepara.jpg',
+    caption:
+      'Sore hari beli dimsum di Alun-Alun Jepara yang waktu itu kuupload di SG karna fotonya lucu—atau lebih tepatnya, jadi lucu karna ada kamu.',
+    orientation: 'portrait',
+    ratio: '3 / 4',
+    position: 'center',
+    note: 'Bab 03 - Sore beli dimsum di Alun-Alun Jepara.',
+  },
+  {
+    id: 'video-jepara-lamongan-malam',
+    src: '/photos/vlog-jepara-lamongan-malam.mp4',
+    caption:
+      'Vlog lucu pas kita di Jepara, nyari lamongan enak dan berakhir makan di situ, terus lanjut jalan2 malam menikmati Jepara.',
+    orientation: 'portrait',
+    ratio: '3 / 4',
+    position: 'center',
+    type: 'video',
+    note: 'Bab 03 - Vlog malam cari lamongan di Jepara.',
+  },
+  {
     id: 'foto-dp-mall',
     src: '/photos/buka-puasa-dp-mall.jpg',
     caption:
@@ -176,6 +197,16 @@ export const photos: PhotoEntry[] = [
     note: 'Foto selfie makan Katsukai di UNNES.',
   },
   {
+    id: 'foto-butterhub',
+    src: '/photos/butterhub-unnes-rapat.jpg',
+    caption:
+      'Makan di Butterhub sebelum aku rapat divisi di UNNES. Lucu banget kalo diingat, kamu ikut nemenin rapat dan akhirnya kukenalin ke semua temen2ku.',
+    orientation: 'portrait',
+    ratio: '3 / 4',
+    position: 'center',
+    note: 'Bab 12 - Makan di Butterhub UNNES sebelum rapat divisi.',
+  },
+  {
     id: 'video-coffeeshop-jepara-1',
     src: '/photos/vlog-coffeeshop-jepara-1.mp4',
     caption:
@@ -190,7 +221,7 @@ export const photos: PhotoEntry[] = [
     id: 'video-coffeeshop-jepara-2',
     src: '/photos/vlog-coffeeshop-jepara-2.mp4',
     caption:
-      'Cerita-cerita sambil ketawa lepas berdua. Momen sederhana kayak gini yang selalu bikin kangen.',
+      'Cerita2 sambil ketawa lepas berdua. Momen sederhana kayak gini yang selalu bikin kangen.',
     orientation: 'landscape',
     ratio: '16 / 9',
     position: 'center',
@@ -225,7 +256,7 @@ export const photos: PhotoEntry[] = [
     id: 'foto-20',
     src: '/photos/hari-terakhir-man.jpg',
     caption:
-      'Hari terakhir di MAN. Habis siram-siraman air dan perpisahan angkatan. Lucu banget kalau sekarang dikenang.',
+      'Hari terakhir di MAN. Habis siram2an air dan perpisahan angkatan. Lucu banget kalo sekarang dikenang.',
     orientation: 'portrait',
     // File asli 568x1053 = ~9:16 vertikal.
     ratio: '9 / 16',
@@ -259,7 +290,7 @@ export const photos: PhotoEntry[] = [
     id: 'foto-17',
     src: '/photos/photocard-mts.jpg',
     caption:
-      'Waktu MTs kita jarang ketemu, jadi aku sering ngeprint fotomu kayak gini. Lucu juga kalau diingat sekarang.',
+      'Waktu MTs kita jarang ketemu, jadi aku sering ngeprint fotomu kayak gini. Lucu juga kalo diingat sekarang.',
     orientation: 'portrait',
     ratio: '9 / 16',
     position: 'center',
@@ -279,7 +310,7 @@ export const photos: PhotoEntry[] = [
     id: 'video-nomi',
     src: '/photos/belajar-bareng-nomi.mp4',
     caption:
-      'Waktu kamu belajar ditemenin Nomi. Momen-momen kecil kayak gini yang selalu bikin senyum.',
+      'Waktu kamu belajar ditemenin Nomi. Momen2 kecil kayak gini yang selalu bikin senyum.',
     orientation: 'portrait',
     ratio: '9 / 16',
     position: 'center',
@@ -297,6 +328,16 @@ export const photos: PhotoEntry[] = [
     note: 'Bab 11 - Foto Nomi dan boneka.',
   },
   {
+    id: 'foto-photobooth-meja-belajar',
+    src: '/photos/photobooth-meja-belajar.jpg',
+    caption:
+      'Foto favoritku. Melihat ada photo booth kita terpampang di atas meja belajarmu, waktu itu bikin aku ngerasa sangat dihargai sebagai pasanganmu.',
+    orientation: 'portrait',
+    ratio: '3 / 4',
+    position: 'center',
+    note: 'Bab 11 - Photo booth terpampang di atas meja belajar.',
+  },
+  {
     id: 'video-tiktok-cantik-1',
     src: '/photos/video-tiktok-cantik-1.mp4',
     caption:
@@ -311,7 +352,7 @@ export const photos: PhotoEntry[] = [
     id: 'video-tiktok-cantik-2',
     src: '/photos/video-tiktok-cantik-2.mp4',
     caption:
-      'Masih tersimpan rapi sampai sekarang. Kamu bener-bener secantik itu.',
+      'Masih tersimpan rapi sampai sekarang. Kamu bener2 secantik itu.',
     orientation: 'portrait',
     ratio: '9 / 16',
     position: 'center',
@@ -326,7 +367,7 @@ export const photos: PhotoEntry[] = [
     id: 'foto-25',
     src: '/photos/sunset-pantai-favorit.jpg',
     caption:
-      'Ini salah satu foto favoritku. Kayaknya aku yang motoin kamu. Outfit yang ini aku suka banget. Kamu kelihatan cantik dan bersinar pas sunset. Kalau aku kasih rating: ∞/10.',
+      'Ini salah satu foto favoritku. Kayaknya aku yang motoin kamu. Outfit yang ini aku suka banget. Kamu kelihatan cantik dan bersinar pas sunset. Kalo aku kasih rating: ∞/10.',
     orientation: 'portrait',
     // File asli 853x1280 = 2:3 rasio.
     ratio: '2 / 3',
@@ -337,7 +378,7 @@ export const photos: PhotoEntry[] = [
     id: 'video-pantai-prau',
     src: '/photos/vlog-pantai-prau.mp4',
     caption:
-      'Vlog kita di Pantai Prau Jepara. Lucu banget kalau diingat, aslinya mau foto banyak tapi malah backlight, jadinya baru foto-foto pas sunset.',
+      'Vlog kita di Pantai Prau Jepara. Lucu banget kalo diingat, aslinya mau foto banyak tapi malah backlight, jadinya baru foto2 pas sunset.',
     orientation: 'landscape',
     ratio: '16 / 9',
     position: 'center',
@@ -346,7 +387,7 @@ export const photos: PhotoEntry[] = [
   },
 
   /* ------------------------------------------------------------------------
-     BAB 14 — Tapi kalau ternyata jalan kita memang berbeda (dua foto favorit)
+     BAB 14 — Tapi kalo ternyata jalan kita memang berbeda (dua foto favorit)
      ------------------------------------------------------------------------ */
   {
     id: 'foto-pap-favorit-1',
@@ -412,7 +453,7 @@ export const photos: PhotoEntry[] = [
     id: 'foto-bandara-banjarmasin',
     src: '/photos/selfie-bandara-banjarmasin.jpg',
     caption:
-      'Selfie di bandara sebelum kamu pulang ke Banjarmasin. Suasana bandara dan detik-detik sebelum boarding yang selalu berat, tapi tetap jadi momen yang aku syukuri.',
+      'Selfie di bandara sebelum kamu pulang ke Banjarmasin. Suasana bandara dan detik2 sebelum boarding yang selalu berat, tapi tetap jadi momen yang aku syukuri.',
     orientation: 'landscape',
     ratio: '4 / 3',
     position: 'center',
@@ -426,7 +467,7 @@ export const photos: PhotoEntry[] = [
     id: 'foto-11',
     src: '/photos/man-awal-1.jpg',
     caption:
-      'Awal kita di MAN. Salah satu bagian dari cerita kita yang waktu itu masih panjang banget dan belum tahu bakal sampai mana.',
+      'Awal kita di MAN. Salah satu bagian dari cerita kita yang waktu itu masih panjang banget dan belum tau bakal sampai mana.',
     orientation: 'portrait',
     position: 'center',
     note: 'Album penutup - Awal di MAN.',
@@ -443,7 +484,7 @@ export const photos: PhotoEntry[] = [
   {
     id: 'foto-13',
     src: '/photos/classmeet-man-1.jpg',
-    caption: 'Classmeet MAN. Lucu banget kalau momen ini diingat-ingat.',
+    caption: 'Classmeet MAN. Lucu banget kalo momen ini diingat2.',
     orientation: 'landscape',
     ratio: '3 / 2',
     position: 'center',
@@ -453,7 +494,7 @@ export const photos: PhotoEntry[] = [
     id: 'foto-14',
     src: '/photos/classmeet-man-2.jpg',
     caption:
-      'Kalau bisa mengulang waktu, ini salah satu momen yang mungkin bakal tetap aku pilih buat diingat.',
+      'Kalo bisa mengulang waktu, ini salah satu momen yang mungkin bakal tetap aku pilih buat diingat.',
     orientation: 'landscape',
     ratio: '3 / 2',
     position: 'center',
@@ -473,7 +514,7 @@ export const photos: PhotoEntry[] = [
     id: 'foto-21',
     src: '/photos/wisuda-man-1.jpg',
     caption:
-      'Hari kelulusan MAN. Kita serasi banget hari itu. Lucu kalau diingat.',
+      'Hari kelulusan MAN. Kita serasi banget hari itu. Lucu kalo diingat.',
     orientation: 'portrait',
     // File asli 720x1280 = 9:16 persis. Anti-crop penuh.
     ratio: '9 / 16',
@@ -495,7 +536,7 @@ export const photos: PhotoEntry[] = [
     id: 'foto-23',
     src: '/photos/wisuda-man-3.jpg',
     caption:
-      'Pertama kalinya aku foto bareng mamahmu dan mamahku. Salah satu titik penting sebelum kita benar-benar masuk ke masa LDR yang jauh.',
+      'Pertama kalinya aku foto bareng mamahmu dan mamahku. Salah satu titik penting sebelum kita bener2 masuk ke masa LDR yang jauh.',
     orientation: 'portrait',
     // File asli 720x1280 = 9:16 persis. Anti-crop penuh.
     ratio: '9 / 16',
@@ -506,7 +547,7 @@ export const photos: PhotoEntry[] = [
     id: 'foto-16',
     src: '/photos/main-ps-kudus.jpg',
     caption:
-      'Pertama kali main PS di Kudus. Ketawa lepas banget waktu itu. Sampai sekarang kalau lihat fotonya, aku masih bisa kebayang suasananya.',
+      'Pertama kali main PS di Kudus. Ketawa lepas banget waktu itu. Sampai sekarang kalo lihat fotonya, aku masih bisa kebayang suasananya.',
     orientation: 'portrait',
     ratio: '9 / 16',
     position: 'center',
@@ -516,7 +557,7 @@ export const photos: PhotoEntry[] = [
     id: 'foto-27',
     src: '/photos/azko-kudus.jpg',
     caption:
-      'AZKO Kudus. Waktu itu kita cuma gabut, jalan-jalan sambil ngomongin furniture yang mungkin suatu hari bakal kita butuhin.',
+      'AZKO Kudus. Waktu itu kita cuma gabut, jalan2 sambil ngomongin furniture yang mungkin suatu hari bakal kita butuhin.',
     orientation: 'portrait',
     ratio: '9 / 16',
     position: 'center',
@@ -559,14 +600,14 @@ export const photos: PhotoEntry[] = [
   {
     id: 'foto-2',
     src: null,
-    caption: 'Sore-sore muter-muter, beli jajan. Ternyata waktu sesederhana itu bisa jadi salah satu bagian yang paling aku rindukan.',
+    caption: 'Sore2 muter2, beli jajan. Ternyata waktu sesederhana itu bisa jadi salah satu bagian yang paling aku rindukan.',
     orientation: 'portrait',
     note: 'Slot cadangan - Kelas 12.',
   },
   {
     id: 'foto-3',
     src: null,
-    caption: 'Waktu kita kehujanan. Bajuku basah kuyup, malamnya aku malah demam. Tapi kalau sekarang diingat, aku tetap senyum.',
+    caption: 'Waktu kita kehujanan. Bajuku basah kuyup, malamnya aku malah demam. Tapi kalo sekarang diingat, aku tetap senyum.',
     orientation: 'square',
     note: 'Slot cadangan - Hujan.',
   },
@@ -580,7 +621,7 @@ export const photos: PhotoEntry[] = [
   {
     id: 'foto-5',
     src: null,
-    caption: 'Jepara–Semarang, mampir Indomaret. Nggak ada tujuan besar. Tapi waktu itu rasanya sudah seperti petualangan sendiri.',
+    caption: 'Jepara–Semarang, mampir Indomaret. Nggak ada tujuan besar. Tapi waktu itu rasanya udah seperti petualangan sendiri.',
     orientation: 'square',
     note: 'Slot cadangan - Jepara-Semarang.',
   },
