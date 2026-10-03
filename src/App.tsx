@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import BookShell from './components/BookShell'
 import Cover from './components/Cover'
 import MusicToggle from './components/MusicToggle'
