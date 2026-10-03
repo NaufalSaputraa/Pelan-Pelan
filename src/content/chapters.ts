@@ -136,7 +136,7 @@ export const chapters: Chapter[] = [
       "Kadang dia cuma butuh didengar.",
       "Aku terlalu sering berpikir dari sisi logika, sementara kamu sedang berbicara dari sisi perasaan.",
       "Bukan karena aku nggak peduli.",
-      "Aku cuma belum cukup ngerti cara mencintai seseorang dari sisi yang dia butuhkan.",
+      "Aku cuma belum cukup ngerti cara mencintai seseorang dari sisi yang kamu butuhkan.",
       "Dan aku minta maaf untuk itu."
     ]
   },
