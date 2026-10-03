@@ -94,6 +94,28 @@ export const photos: PhotoEntry[] = [
     note: 'Bab 03 - Video vlog otw Jepara Kota.',
   },
   {
+    id: 'video-photobooth-jepara-1',
+    src: '/photos/vlog-photobooth-jepara-1.mp4',
+    caption:
+      'Vlog pas kita photobooth di Jepara yang aku pakai baju muslim dan vibes-nya kayak habis lebaran banget. Momen yang lucu buat dikenang.',
+    orientation: 'portrait',
+    ratio: '9 / 16',
+    position: 'center',
+    type: 'video',
+    note: 'Bab 03 - Vlog photobooth Jepara part 1.',
+  },
+  {
+    id: 'video-photobooth-jepara-2',
+    src: '/photos/vlog-photobooth-jepara-2.mp4',
+    caption:
+      'Lanjutan vlog pas kita photobooth di Jepara. Masih dengan vibes habis lebaran yang lucu buat diingat.',
+    orientation: 'portrait',
+    ratio: '9 / 16',
+    position: 'center',
+    type: 'video',
+    note: 'Bab 03 - Vlog photobooth Jepara part 2.',
+  },
+  {
     id: 'foto-katsukai',
     src: '/photos/katsukai-unnes.jpg',
     caption:
