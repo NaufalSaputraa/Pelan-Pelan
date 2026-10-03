@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "omnimemory": {
+      "command": "python",
+      "args": [
+        "D:/Coding/AG-Kit/.agent/engine/mcp_server.py"
+      ]
+    }
+  }
+}

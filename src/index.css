@@ -1,0 +1,414 @@
+@import 'tailwindcss';
+
+/* ==========================================================================
+   DESIGN TOKENS — PELAN-PELAN (PLAN 02: polish visual)
+   --------------------------------------------------------------------------
+   Palet inti TIDAK berubah: ivory / charcoal / muted / clay / line.
+   Yang diolah cuma hierarki, kontras turunan, jarak, dan motion — supaya
+   terasa buku fisik yang tenang, bukan landing page.
+
+   Struktur: @theme di Tailwind v4 = "tailwind.config.js extend" yang ditulis
+   sebagai CSS. Mengubah nilai di bawah langsung mengubah semua utility kelas
+   (mis. `bg-ivory`, `text-muted`, `font-display`).
+
+   READING MODE: default hangat (warm). Ganti dengan menambah atribut di <html>
+       document.documentElement.dataset.readingMode = 'light'
+   Cuma ditimpa di blok `html[data-reading-mode='light']` di bawah — sengaja
+   sedikit, jangan over-engineer.
+   ========================================================================== */
+
+@theme {
+  /* --- Warna dasar ------------------------------------------------------ */
+  --color-ivory: #faf7f2; /* BACKGROUND utama halaman (warm, default)          */
+  --color-ivory-deep: #f2ece3; /* permukaan alternatif / tepi halaman, kartu foto */
+  --color-ivory-warm: #f6f0e7; /* selang-seling paragaf, blok kutipan            */
+
+  --color-charcoal: #2b2b2b; /* TEKS utama                                       */
+  --color-charcoal-soft: #5c5750; /* teks sekunder / subtitle (kontras ~6.7:1)     */
+  --color-charcoal-faint: #736d65; /* nomor halaman / meta (dinaikkan dari #8a847b
+                                     supaya tetap kebaca di HP — 4.8:1)           */
+
+  /* --- Accent ----------------------------------------------------------- */
+  --color-muted: #8c7a6b; /* ACCENT utama: muted brown (garis/ornamen)           */
+  --color-muted-soft: #b3a496; /* accent versi pudar untuk garis / ikon          */
+  --color-clay: #c4a484; /* SUBTLE WARM ACCENT — sorotan kecil, tidak dominan  */
+
+  /* --- Garis ------------------------------------------------------------ */
+  --color-line: #e3dad0; /* hairline / divider tipis                           */
+  --color-line-strong: #d2c6b8; /* hairline yang butuh sedikit poke                */
+
+  /* --- Tipografi -------------------------------------------------------- */
+  --font-display: 'Cormorant Garamond', ui-serif, Georgia, 'Times New Roman',
+    serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI',
+    sans-serif;
+  --font-body-serif: 'Lora', ui-serif, Georgia, 'Times New Roman', serif;
+
+  /* Skala mobile-first. clamp() bikin display lega di desktop tapi aman di 360. */
+  --text-display: clamp(2.5rem, 11vw, 3.5rem);
+  --text-display--line-height: 1.08;
+  --text-display--letter-spacing: 0.01em;
+
+  --text-title: 1.75rem;
+  --text-title--line-height: 1.2;
+  --text-title--letter-spacing: 0.005em;
+
+  --text-subtitle: 1.0625rem;
+  --text-subtitle--line-height: 1.7;
+
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.85; /* line-height LEGA — kunci rasa baca books */
+  --text-body-serif: 1.0625rem;
+  --text-body-serif--line-height: 1.9;
+
+  --text-meta: 0.75rem;
+  --text-meta--line-height: 1.5;
+  --text-meta--letter-spacing: 0.18em;
+
+  /* Wordmark sampul: Cormorant uppercase + tracking lebar. Tracking-nya yang
+     bikin "PELAN-PELAN" terasa sampul buku, bukan judul halaman. clamp()
+     ditahan kecil supaya di 360px masih satu baris. */
+  --text-wordmark: clamp(2rem, 9.5vw, 3.4rem);
+  --text-wordmark--line-height: 1.05;
+  --text-wordmark--letter-spacing: 0.14em;
+
+  /* Kutipan: lebih besar dari body, tetap aman di 360px. */
+  --text-quote: clamp(1.375rem, 5.6vw, 1.75rem);
+  --text-quote--line-height: 1.5;
+
+  /* --- Layout ----------------------------------------------------------- */
+  --container-book: 38rem; /* max lebar baca di HP */
+
+  /* --- Motion ----------------------------------------------------------- */
+  --duration-page: 0.42s;
+  --ease-page: cubic-bezier(0.22, 0.61, 0.36, 1);
+  /* fade + SLIGHT slide, 0.42s — cukup buat terasa "lembar bergeser",
+     cukup cepat buat tidak menghambat swipe di HP murah. */
+  --animate-page-in-next: page-in-next var(--duration-page) var(--ease-page) both;
+  --animate-page-in-prev: page-in-prev var(--duration-page) var(--ease-page) both;
+  --animate-fade-rise: fade-rise 0.6s var(--ease-page) both;
+  --animate-fade-in: fade-in var(--duration-page) var(--ease-page) both;
+}
+
+@keyframes page-in-next {
+  from {
+    opacity: 0;
+    transform: translate3d(1.25rem, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes page-in-prev {
+  from {
+    opacity: 0;
+    transform: translate3d(-1.25rem, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0.75rem, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Fade polos — dipakai foto yang muncul setelah selesai dimuat. */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   TEKSTUR KERTAS
+   --------------------------------------------------------------------------
+   Butiran halus (grain) sebagai background-image BUKAN overlay — jadi tidak
+   pernah menutupi teks, tidak perlu z-index, tidak memaksa repaint tiap scroll.
+   SVG inline: feTurbulence abu-abu + opacity 6% di atas ivory = serat kertas,
+   bukan "noise Instagram".
+
+   Dipakai lewat class `.grain` (BookShell, bingkai foto) dan `.cover-sky`
+   (grain + sapuan hangat paling atas sampul).
+   ========================================================================== */
+:root {
+  --texture-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+}
+
+/* ==========================================================================
+   READING MODE — Warm (default) / Light
+   --------------------------------------------------------------------------
+   Cuma nimpah variabel warna. Default tetap warm karena atributnya tidak ada
+   sampai developer mengeset `data-reading-mode="light"` secara sadar.
+   ========================================================================== */
+
+html[data-reading-mode='light'] {
+  --color-ivory: #fffdfb; /* kertas lebih putih, tetap hangat sedikit */
+  --color-ivory-deep: #f7f3ed;
+  --color-ivory-warm: #fbf8f3;
+  --color-charcoal: #232220; /* kontras naik dikit buat baca lama */
+  --color-charcoal-soft: #4b4741;
+  --color-charcoal-faint: #6d675f;
+  --color-line: #ebe4da;
+  --color-line-strong: #ded4c7;
+}
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+@layer base {
+  html {
+    /* PENTING untuk mobile: kill horizontal overflow dari scrollbar/animasi. */
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    min-height: 100dvh;
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Semua elemen turunan tidak boleh memaksa halaman melebar. */
+  *,
+  *::before,
+  *::after {
+    min-width: 0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    color: var(--color-charcoal);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Sorotan teks ikut palet — kecil, tapi nambah rasa "buku punya". */
+  ::selection {
+    background-color: var(--color-clay);
+    color: var(--color-charcoal);
+  }
+
+  /* Fokus keyboard yang terlihat tapi tidak norak. */
+  :focus-visible {
+    outline: 2px solid var(--color-muted);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  button {
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+/* ==========================================================================
+   UTILITAS KECIL
+   ========================================================================== */
+
+@layer components {
+  /* Tekstur kertas: background-image, bukan overlay. Aman untuk teks. */
+  .grain {
+    background-image: var(--texture-grain);
+    background-repeat: repeat;
+  }
+
+  /* Sampul: grain + satu sapuan hangat paling atas. Sengaja cuma di Cover —
+     di dalam buku, kertasnya polos supaya mata istirahat. */
+  .cover-sky {
+    background-image:
+      radial-gradient(
+        120% 70% at 50% -10%,
+        rgba(196, 164, 132, 0.28),
+        rgba(196, 164, 132, 0) 62%
+      ),
+      var(--texture-grain);
+    background-repeat: no-repeat, repeat;
+  }
+
+  /* Tombol "Buka buku" — 48px tinggi, cukup buat satu tangan. */
+  .btn-book {
+    min-height: 3rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: 9999px;
+    font-size: 0.9375rem;
+    letter-spacing: 0.04em;
+    transition:
+      background-color 0.25s var(--ease-page),
+      color 0.25s var(--ease-page),
+      border-color 0.25s var(--ease-page),
+      transform 0.2s var(--ease-page);
+  }
+  /* Regangan halus waktu ditekan — buku "ngikut" jempol, bukan tombol app. */
+  .btn-book:active {
+    transform: scale(0.985);
+  }
+
+  /* Tombol Prev/Next — 44px = target sentuh minimum yang enak di HP. */
+  .btn-nav {
+    min-height: 2.75rem;
+    min-width: 2.75rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.8125rem;
+    letter-spacing: 0.12em;
+    transition:
+      background-color var(--duration-page) var(--ease-page),
+      color var(--duration-page) var(--ease-page),
+      border-color var(--duration-page) var(--ease-page);
+  }
+  .btn-nav:disabled {
+    cursor: default;
+  }
+
+  /* Ornamen pemisah bab — dua hairline dengan titik clay di tengah.
+     Garis tipis = satu-satunya dekorasi yang dipakai di buku ini. */
+  .rule-ornament {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .rule-ornament::before,
+  .rule-ornament::after {
+    content: '';
+    height: 1px;
+    flex: 1;
+    background-color: var(--color-line);
+  }
+
+  /* Folio: nomor halaman di kaki halaman, gaya buku cetak. */
+  .folio {
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    letter-spacing: 0.05em;
+    color: var(--color-charcoal-faint);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Baris kontrol pojok (musik + mode baca).
+     Mengambang di atas halaman, tapi DISEJELAJARKAN dengan kolom buku
+     (max-w-book) — bukan menempel ke tepi layar. Di desktop yang lebar
+     tombolnya jadi dekat buku, bukan melayang di pinggir layar seperti
+     dashboard.
+
+     `pointer-events: none` di baris + `auto` di tombol: baris selebar kolom
+     buku tidak boleh memblokir ketukan ke teks di bawahnya; hanya tombolnya
+     yang bisa diklik. */
+  .top-scrim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: calc(3.5rem + env(safe-area-inset-top, 0px));
+    background: linear-gradient(
+      to bottom,
+      var(--color-ivory) 45%,
+      color-mix(in srgb, var(--color-ivory) 80%, transparent) 75%,
+      transparent 100%
+    );
+    pointer-events: none;
+    z-index: 35;
+    transition: background 0.3s ease;
+  }
+  .corner-row {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 40;
+    width: 100%;
+    max-width: var(--container-book);
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: calc(0.75rem + env(safe-area-inset-top, 0px));
+    padding-inline: 1.25rem;
+    pointer-events: none;
+  }
+  .corner-row > * {
+    pointer-events: auto;
+  }
+  @media (min-width: 40rem) {
+    .corner-row {
+      padding-inline: 1.5rem;
+    }
+  }
+}
+
+/* ==========================================================================
+   HORMATI prefers-reduced-motion
+   --------------------------------------------------------------------------
+   Semua animasi halaman (slide/fade) otomatis dimatikan di sini. Tidak perlu
+   cek matchMedia di JS — CSS yang interrupting duluan.
+   `animation-delay` ikut di-nolkan supaya elemen ber-stagger langsung muncul,
+   bukan diam-diam nunggu delay sementara durasinya sudah 0.
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   PRINT / CETAK & EKSPOR PDF
+   --------------------------------------------------------------------------
+   Sembunyikan tombol melayang, navigasi bawah, dan dialog saat dicetak.
+   ========================================================================== */
+@media print {
+  .corner-row,
+  .top-scrim,
+  nav,
+  [role="progressbar"],
+  [role="dialog"],
+  .btn-nav,
+  .sr-only {
+    display: none !important;
+  }
+
+  body,
+  .grain {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+}
