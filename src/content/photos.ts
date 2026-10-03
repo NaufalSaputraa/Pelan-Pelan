@@ -336,6 +336,30 @@ export const photos: PhotoEntry[] = [
   },
 
   /* ------------------------------------------------------------------------
+     BAB 14 — Tapi kalau ternyata jalan kita memang berbeda (dua foto favorit)
+     ------------------------------------------------------------------------ */
+  {
+    id: 'foto-pap-favorit-1',
+    src: '/photos/pap-favorit-1.jpg',
+    caption:
+      'Foto darimu yang selalu bikin seneng. Rasanya beruntung banget pernah memilikimu.',
+    orientation: 'portrait',
+    ratio: '9 / 16',
+    position: 'center',
+    note: 'Bab 14 - Foto favorit 1.',
+  },
+  {
+    id: 'foto-pap-favorit-2',
+    src: '/photos/pap-favorit-2.jpg',
+    caption:
+      'Kamu selalu secantik ini, mau pakai apa pun dan dalam kondisi apa pun.',
+    orientation: 'portrait',
+    ratio: '9 / 16',
+    position: 'center',
+    note: 'Bab 14 - Foto favorit 2.',
+  },
+
+  /* ------------------------------------------------------------------------
      BAB 15 — Terima kasih (video pagi, foto photobooth MEF & video snippet)
      ------------------------------------------------------------------------ */
   {
