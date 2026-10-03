@@ -274,6 +274,21 @@ export const photos: PhotoEntry[] = [
   },
 
   /* ------------------------------------------------------------------------
+     BAB 15 — Satu video ucapan pagi penuh senyum & semangat
+     ------------------------------------------------------------------------ */
+  {
+    id: 'video-pagi-favorit',
+    src: '/photos/vlog-pagi-favorit.mp4',
+    caption:
+      'Vlog pagi hari favoritku. Senyuman dan suaramu di pagi hari yang selalu berhasil bikin aku ikutan semangat menjalani hari.',
+    orientation: 'portrait',
+    ratio: '5 / 9',
+    position: 'center',
+    type: 'video',
+    note: 'Bab 15 - Vlog pagi hari favorit.',
+  },
+
+  /* ------------------------------------------------------------------------
      BAB 16 — Satu foto kenangan perpisahan di bandara
      ------------------------------------------------------------------------ */
   {
