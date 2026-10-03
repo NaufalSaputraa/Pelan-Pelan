@@ -315,7 +315,7 @@ export const photos: PhotoEntry[] = [
   },
 
   /* ------------------------------------------------------------------------
-     BAB 15 — Satu video ucapan pagi penuh senyum & semangat
+     BAB 15 — Terima kasih (video pagi, foto photobooth MEF & video snippet)
      ------------------------------------------------------------------------ */
   {
     id: 'video-pagi-favorit',
@@ -327,6 +327,27 @@ export const photos: PhotoEntry[] = [
     position: 'center',
     type: 'video',
     note: 'Bab 15 - Vlog pagi hari favorit.',
+  },
+  {
+    id: 'foto-photobooth-mef',
+    src: '/photos/photobooth-mef.jpg',
+    caption:
+      'Photobooth pas MEF yang lucu banget. Walau sayangnya waktu itu kita nggak sempat fotbar di depan panggungnya, momen ini tetap manis banget buat diingat.',
+    orientation: 'portrait',
+    ratio: '2 / 3',
+    position: 'center',
+    note: 'Bab 15 - Foto photobooth MEF.',
+  },
+  {
+    id: 'video-photobooth-mef',
+    src: '/photos/video-photobooth-mef.mp4',
+    caption:
+      'Live snippet pas kita photobooth MEF. Sayang waktu itu kita nggak sempat fotbar di depan panggungnya, tapi momen ini tetap selalu bikin senyum.',
+    orientation: 'landscape',
+    ratio: '3 / 2',
+    position: 'center',
+    type: 'video',
+    note: 'Bab 15 - Video snippet photobooth MEF.',
   },
 
   /* ------------------------------------------------------------------------
