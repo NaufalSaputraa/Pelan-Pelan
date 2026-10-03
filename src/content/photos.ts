@@ -137,6 +137,16 @@ export const photos: PhotoEntry[] = [
     type: 'video',
     note: 'Bab 03 - Vlog pagi di Jepara Kota & BRI.',
   },
+  {
+    id: 'foto-dp-mall',
+    src: '/photos/buka-puasa-dp-mall.jpg',
+    caption:
+      'Nunggu buka puasa di DP Mall sampai bingung mau ngapain. Tapi aku bersyukur foto ini masih ada, kamu kelihatan lucu dan imut banget di sini.',
+    orientation: 'portrait',
+    ratio: '3 / 4',
+    position: 'center',
+    note: 'Bab 03 - Nunggu buka puasa di DP Mall.',
+  },
 
   /* ------------------------------------------------------------------------
      BAB 08 — Satu foto nonton film Sore di bioskop

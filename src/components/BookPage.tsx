@@ -82,6 +82,7 @@ const PHOTOS_BY_CHAPTER: Record<string, string[]> = {
     'video-photobooth-jepara-2',
     'video-photobooth-jepara-live',
     'video-jepara-pagi-bri',
+    'foto-dp-mall',
   ],
   'page-08': ['foto-bioskop-sore'],
   'page-10': ['foto-20', 'foto-pap-cantik-1', 'foto-pap-cantik-2'],
