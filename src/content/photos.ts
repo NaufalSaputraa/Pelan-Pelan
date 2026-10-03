@@ -246,6 +246,28 @@ export const photos: PhotoEntry[] = [
     position: 'center',
     note: 'Bab 11 - Foto Nomi dan boneka.',
   },
+  {
+    id: 'video-tiktok-cantik-1',
+    src: '/photos/video-tiktok-cantik-1.mp4',
+    caption:
+      'Salah satu video TikTok favoritku, senyummu di sini manis banget.',
+    orientation: 'portrait',
+    ratio: '9 / 16',
+    position: 'center',
+    type: 'video',
+    note: 'Bab 11 - Video TikTok favorit part 1.',
+  },
+  {
+    id: 'video-tiktok-cantik-2',
+    src: '/photos/video-tiktok-cantik-2.mp4',
+    caption:
+      'Masih tersimpan rapi sampai sekarang. Kamu bener-bener secantik itu.',
+    orientation: 'portrait',
+    ratio: '9 / 16',
+    position: 'center',
+    type: 'video',
+    note: 'Bab 11 - Video TikTok favorit part 2.',
+  },
 
   /* ------------------------------------------------------------------------
      BAB 13 — Momen sunset Pantai Prau Jepara (foto favorit + vlog)
