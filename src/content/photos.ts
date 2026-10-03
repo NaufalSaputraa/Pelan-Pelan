@@ -274,6 +274,20 @@ export const photos: PhotoEntry[] = [
   },
 
   /* ------------------------------------------------------------------------
+     BAB 16 — Satu foto kenangan perpisahan di bandara
+     ------------------------------------------------------------------------ */
+  {
+    id: 'foto-bandara-banjarmasin',
+    src: '/photos/selfie-bandara-banjarmasin.jpg',
+    caption:
+      'Selfie di bandara sebelum kamu pulang ke Banjarmasin. Suasana bandara dan detik-detik sebelum boarding yang selalu berat, tapi tetap jadi momen yang aku syukuri.',
+    orientation: 'landscape',
+    ratio: '4 / 3',
+    position: 'center',
+    note: 'Bab 16 - Selfie di bandara sebelum pulang ke Banjarmasin.',
+  },
+
+  /* ------------------------------------------------------------------------
      BAB 19 — Album Penutup: Kumpulan Kenangan Kita
      ------------------------------------------------------------------------ */
   {
