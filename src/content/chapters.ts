@@ -263,9 +263,8 @@ export const chapters: Chapter[] = [
       "Ada hal-hal yang seharusnya bisa aku lakukan lebih baik.",
       "Tapi ada juga begitu banyak hal baik yang akan selalu aku syukuri.",
       "Kalau waktu bisa diulang dan aku kembali menjadi diriku yang dulu...",
-      "Aku rasa aku tetap akan memilih kamu.",
-      "Bukan karena aku ingin mengubah akhir cerita.",
-      "Tapi karena tujuh tahun bersamamu tetap menjadi bagian hidup yang sangat berarti buat aku."
+      "Aku rasa aku akan tetap memilih kamu.",
+      "Karena mungkin di kesempatan lain aku bisa lebih menyayangimu dan jadi pria yang lebih baik dari ini."
     ]
   },
   {
