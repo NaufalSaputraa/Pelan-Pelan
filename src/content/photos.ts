@@ -28,6 +28,8 @@ export interface PhotoEntry {
   ratio?: string
   /** Titik fokus object-position CSS (misal: 'center'). */
   position?: string
+  /** Tipe media: image (default) atau video. */
+  type?: 'image' | 'video'
   /** Catatan internal bab dan momen. */
   note: string
 }
@@ -79,6 +81,27 @@ export const photos: PhotoEntry[] = [
     ratio: '2 / 3',
     position: 'center',
     note: 'Bab 03 - Photo booth Jepara.',
+  },
+  {
+    id: 'video-1',
+    src: '/photos/vlog-jepara.mp4',
+    caption:
+      'Kamu ngevlog waktu kita lagi otw ke Jepara Kota. Aku inget banget momen ini.',
+    orientation: 'portrait',
+    ratio: '9 / 16',
+    position: 'center',
+    type: 'video',
+    note: 'Bab 03 - Video vlog otw Jepara Kota.',
+  },
+  {
+    id: 'foto-katsukai',
+    src: '/photos/katsukai-unnes.jpg',
+    caption:
+      'Foto selfiemu yang cantik pas kita lagi makan katsukai di UNNES. Aku nggak pernah makan katsukai di tempatnya langsung setelah ini.',
+    orientation: 'portrait',
+    ratio: '9 / 16',
+    position: 'center',
+    note: 'Foto selfie makan Katsukai di UNNES.',
   },
 
   /* ------------------------------------------------------------------------

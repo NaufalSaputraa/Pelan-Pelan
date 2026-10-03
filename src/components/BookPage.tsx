@@ -74,7 +74,7 @@ interface BookPageProps {
  */
 const PHOTOS_BY_CHAPTER: Record<string, string[]> = {
   'page-02': ['foto-1', 'foto-18'],
-  'page-03': ['foto-19', 'foto-24'],
+  'page-03': ['foto-19', 'foto-24', 'video-1'],
   'page-10': ['foto-20'],
   'page-11': ['foto-17', 'foto-26'],
   'page-13': ['foto-25'],

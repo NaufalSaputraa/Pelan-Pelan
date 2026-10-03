@@ -85,21 +85,43 @@ export default function PhotoPlaceholder({
         aria-label={showImage && onSelect ? `Perbesar foto: ${photo.caption ?? photo.note}` : undefined}
       >
         {showImage ? (
-          <img
-            src={photo.src as string}
-            alt={photo.caption ?? photo.note ?? 'Foto di buku Pelan-Pelan'}
-            loading="lazy"
-            decoding="async"
-            // Fade-in setelah gambar benar-benar siap: tidak ada kilatan
-            // kotak kosong dulu baru foto. Kalau gagal, onError yang ambil alih.
-            className={`h-full w-full object-cover transition duration-[420ms] ease-page group-hover/frame:scale-[1.02] ${
-              loaded ? 'opacity-100' : 'opacity-0'
-            }`}
-            // Titik fokus per slot; default 'center' = perilaku bawaan CSS.
-            style={{ objectPosition }}
-            onLoad={() => setLoaded(true)}
-            onError={() => setFailed(true)}
-          />
+          photo.type === 'video' || photo.src?.endsWith('.mp4') ? (
+            <>
+              <video
+                src={photo.src as string}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                className="h-full w-full object-cover transition duration-[420ms] ease-page group-hover/frame:scale-[1.02]"
+                style={{ objectPosition }}
+                onError={() => setFailed(true)}
+              />
+              <span
+                aria-hidden="true"
+                className="absolute bottom-2.5 right-2.5 flex h-6 w-6 items-center justify-center rounded-full bg-charcoal/70 text-[0.625rem] text-ivory backdrop-blur-xs shadow-md transition-transform group-hover/frame:scale-110"
+              >
+                ▶
+              </span>
+            </>
+          ) : (
+            <img
+              src={photo.src as string}
+              alt={photo.caption ?? photo.note ?? 'Foto di buku Pelan-Pelan'}
+              loading="lazy"
+              decoding="async"
+              // Fade-in setelah gambar benar-benar siap: tidak ada kilatan
+              // kotak kosong dulu baru foto. Kalau gagal, onError yang ambil alih.
+              className={`h-full w-full object-cover transition duration-[420ms] ease-page group-hover/frame:scale-[1.02] ${
+                loaded ? 'opacity-100' : 'opacity-0'
+              }`}
+              // Titik fokus per slot; default 'center' = perilaku bawaan CSS.
+              style={{ objectPosition }}
+              onLoad={() => setLoaded(true)}
+              onError={() => setFailed(true)}
+            />
+          )
         ) : (
           <EmptyFrame />
         )}

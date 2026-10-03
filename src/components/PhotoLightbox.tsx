@@ -69,16 +69,26 @@ export default function PhotoLightbox({ photo, onClose }: PhotoLightboxProps) {
         </button>
       </div>
 
-      {/* Tengah: Foto Resolusi Penuh */}
+      {/* Tengah: Foto / Video Resolusi Penuh */}
       <div
         className="flex-1 flex items-center justify-center w-full max-w-4xl p-2 min-h-0"
         onClick={(e) => e.stopPropagation()}
       >
-        <img
-          src={photo.src}
-          alt={photo.caption ?? photo.note}
-          className="max-h-[72vh] max-w-full object-contain rounded-sm shadow-2xl select-none"
-        />
+        {photo.type === 'video' || photo.src?.endsWith('.mp4') ? (
+          <video
+            src={photo.src}
+            controls
+            autoPlay
+            playsInline
+            className="max-h-[72vh] max-w-full rounded-sm shadow-2xl"
+          />
+        ) : (
+          <img
+            src={photo.src}
+            alt={photo.caption ?? photo.note}
+            className="max-h-[72vh] max-w-full object-contain rounded-sm shadow-2xl select-none"
+          />
+        )}
       </div>
 
       {/* Baris Bawah: Caption Foto */}
