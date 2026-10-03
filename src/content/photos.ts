@@ -227,7 +227,7 @@ export const photos: PhotoEntry[] = [
   },
 
   /* ------------------------------------------------------------------------
-     BAB 13 — Satu foto favorit personal
+     BAB 13 — Momen sunset Pantai Prau Jepara (foto favorit + vlog)
      ------------------------------------------------------------------------ */
   {
     id: 'foto-25',
@@ -239,6 +239,17 @@ export const photos: PhotoEntry[] = [
     ratio: '2 / 3',
     position: 'center',
     note: 'Bab 13 - Sunset favorit.',
+  },
+  {
+    id: 'video-pantai-prau',
+    src: '/photos/vlog-pantai-prau.mp4',
+    caption:
+      'Vlog kita di Pantai Prau Jepara. Lucu banget kalau diingat, aslinya mau foto banyak tapi malah backlight, jadinya baru foto-foto pas sunset.',
+    orientation: 'landscape',
+    ratio: '16 / 9',
+    position: 'center',
+    type: 'video',
+    note: 'Bab 13 - Vlog Pantai Prau Jepara.',
   },
 
   /* ------------------------------------------------------------------------
