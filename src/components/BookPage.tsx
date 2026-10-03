@@ -91,9 +91,9 @@ const INLINE_MEDIA_MAP: Record<string, Record<number, string[]>> = {
   'page-10': {
     19: ['foto-20', 'foto-pap-cantik-1', 'foto-pap-cantik-2'],
   },
-  /* Bab 12 — "Tentang kamu". Di akhir (index 33). */
+  /* Bab 12 — "Tentang kamu". Di akhir (index 32). */
   'page-12': {
-    33: [
+    32: [
       'foto-katsukai',
       'foto-butterhub',
       'video-momen-gemes',
